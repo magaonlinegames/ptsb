@@ -1,0 +1,1086 @@
+/* NOVEMBER 14 2021*/
+.ECOMMERCE{
+    background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+
+
+.bdwnred{
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-radius: 15px;
+}
+/*JULY 31 2021*/
+.BANK_SERVICE_TRANSFER_REQUEST{
+    box-shadow: 4px 4px 12px grey;
+    width: 90%!important;
+    overflow: hidden;
+    margin: 9px;
+    margin-left: 20px!important;
+    padding: 23px 8px;
+    padding-left: 20px!important;
+}
+/*JULY 30, 2021*/
+/* 2025 */
+#CLIENTTRANSFERREQUEST a{
+    display: block;
+    margin-top: 6px;
+}
+.BANKING_SERVICE{
+    background: white;
+    overflow-y: auto;
+}
+.align_center{
+    text-align: center;
+}
+.BS .CDFORM{
+    position: relative;
+    box-shadow: 4px 4px 12px grey;
+    margin: 9px;
+    margin-left: 20px!important;
+    width: 90%!important;
+    border-radius: 8px;
+}
+#reload a{
+    display: inline-block;
+    border-radius: 100%;
+    padding: 10px;
+    box-shadow: 4px 4px 12px;
+    position: relative;
+    top: 8px;
+}
+#SAVE_BANK_INFORMATION{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.CDFORM .switch{
+    position: absolute;
+    top: 0;
+    right: 14px;
+}
+.ADD_TRANSACTION{
+    text-align: center;
+}
+.ADD_TRANSACTION i{
+    font-size: 42px!important;
+    cursor: pointer;
+}
+.BANK_SERVICE_RECENT_TRANSACTIONS{
+    box-shadow: 4px 4px 12px grey;
+    width: 90%!important;
+    overflow: hidden;
+    margin: 9px;
+    margin-left: 20px!important;
+    padding: 23px 8px;
+    padding-left: 20px!important;
+    border-radius: 4px;
+}
+.BSRT li{
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid grey;
+    padding-bottom: 8px;
+}
+.orderNumber{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 44px!important;
+    border: 4px solid #b33a01!important;
+    background: green;
+    text-align: center;
+    font-size: 21px!important;
+    height: 25px!important;
+}
+.BSRT_lii{
+    position: relative;
+    top: 7px;
+}
+.BSRT_transaction{
+    display: inline-block;
+    width: 400px;
+    line-height: 18px;
+}
+.BSRT_transactionType{
+    margin-top: 5px;
+}
+.BSRT_balanceDate{
+    text-align: right;
+}
+.BSRT_balanceDate input{
+    text-align: center;
+}
+.BSRT_balance{
+    position: relative;
+}
+.BSRT_date{
+    position: relative;
+    top: -7px;
+}
+
+.BSRT_btnBox{
+    text-align: center;
+}
+.BSRT_btnBox a{
+    width: 130px;
+    margin-left: 3px;
+}
+
+/*BANK MANAGER */
+.DATE_p{
+    font-size: 12px;
+    position: absolute;
+    right: 12px;
+    top: 0px;
+}
+.UPPERCASE{
+    text-transform: uppercase;
+}
+.beasty1{
+    position: absolute;
+    top: 0;
+    right: 23px;
+    font-size: 12px;
+}
+.beasty1 p{
+    margin: 0;
+    padding: 0;
+}
+.fromWhichAcc{
+    text-align: right;
+}
+.bm_from_acc{
+    text-transform: uppercase;
+    display: inline-block;
+}
+.BM_CARD_CONTAINER{
+}
+.BM{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000000db;
+    z-index: 6666;
+}
+.BM .card-panel{
+    box-shadow: 4px 4px 62px rgb(0, 0, 0);
+    height: 460px;
+    position: relative;
+}
+.BM .card-panel input{
+    display: block;
+    font-size: 12px!important;
+}
+.BM .top{
+    text-align: center;
+
+}
+.BM input{
+    text-transform: uppercase;
+    color: black;
+}
+.BM .top i{
+    font-size: 155px;
+    color: teal;
+}
+.BM .cd-content p{
+    text-align: center;
+    text-transform: uppercase;
+}
+.BM .cd-btns a{
+    width: 46%;
+    margin-left: 6px;
+}
+.cdbtnLeft{
+    margin-right: 5px;
+}
+.IDME_txt{
+    font-size: 11px;
+}
+/*BANK MANAGER */
+/* 0.0.1 */
+.BOARD{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 230px;
+    padding: 0 20px;
+    z-index: 666;
+    height: 100%;
+    width: 81%;
+    background: url(oceanwave.jpg);
+    background-size: cover;
+}
+@media screen and (min-width: 761px)
+and (max-width: 9999999999px){
+    .BOARD{
+       
+    }
+}
+
+
+#THXBHT{
+    border-bottom: 1px solid green!important;
+}
+#THXBHT tr input{
+    font-size: 10px;
+}
+#THXBHT tr td{
+    text-align: center;
+    border-left: 1px solid grey;
+}
+.BOX001{
+    border-radius: 3px;
+    margin-right: 2%;
+    color: rgb(0, 0, 0);
+    float: left;
+    background: rgb(255 255 255 / 93%);
+    width: 48%;
+    padding: 30px 10px;
+    border: 1px solid white;
+    margin-top: 30px;
+}
+.input-fields{
+    position: relative;
+}
+.input-fields input{
+    margin-bottom: 18px!important;
+    color: teal;
+}
+.ifs .btnn{
+    color: red;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+}
+.btnnACTIVE{
+    BACKGROUND: black;
+    padding: 0 8px;
+    color: white!important;
+    bottom: -9px;
+}
+/* END 0.0.1 */
+
+/*JUNE 13 2021 */
+.NAVBAR_002{
+    padding: 10px 0;
+}
+.NAV_TITLE{
+    margin-bottom: 4px;
+}
+.NAVBAR_002 .NAV_TITLE{
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    color: brown;
+}
+.NAVBAR_002 #nvbinputbar{
+    margin: auto;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    height: 35px;
+}
+.NAVBAR_002 #nvbinputbar input{
+    font-size: 27px;
+    width: 80%;
+    text-align: center;
+    top: -6px;
+    position: absolute;
+}
+.NAVBAR_002 #nvbinputbar i{
+    cursor: pointer;
+    background: #191919;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 20%;
+    text-align: center;
+    padding-top: 2%;
+}
+.NAVBAR_002 #nvbinputbar i:hover{
+    cursor: pointer;
+    color: brown;
+    transition: 2s;
+}
+
+.BANKER-001{
+    background: white;
+}
+.NAVBAR-001{
+    background: WHITE;
+    border-right: 1px solid black;
+}
+#navbar-bx{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    position: relative;
+}
+.nvb-spinner{margin-left: -13px;}
+#nvb-rbtn{position: absolute;right: 0;padding-top: 12px;height: 100%;cursor: pointer;}
+#nvbloader{
+    background: red;
+    display: block;
+    position: fixed;
+    bottom: 0;
+}
+#nvb-txt, .NVBAA{
+     display: inline-block;
+     width: 80%; 
+     text-align: center;
+}
+#nvb-txt input, .NVBAA input{
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    font-family: 'Mate SC', serif;
+    font-size: 27px;
+}
+
+
+
+.GOD{
+    position: fixed;
+    z-index: 666;
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    color: inherit;
+    cursor: pointer;
+}
+.FH{
+    height: 100%!important;
+}
+.TXT{
+    display: block;
+}
+.HIMSELF{
+    position: absolute;
+    width: 70px;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 70px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../public/head.JPG);
+}
+.xnx{
+    text-align: center;
+}
+.XX{
+}
+.XX:hover{
+    color: red;
+    transition: .5s;
+}
+.card-img-bx img{
+    width: 50px;
+}
+
+#bank-controller input{
+    color: #d86161;
+}
+#card-btns a{
+    display: inline-block!important;
+}
+.card-action button{
+    background: none;
+    color: white;
+    border: none;
+}
+.sr-info-bx{
+    box-shadow: 4px 4px 12px #252525;
+    padding: 32px 0;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    overflow: hidden;
+    height: 263px;
+    overflow-y: auto;
+}
+
+.dd{
+    left: 11px!important;
+    position: inherit;
+    width: 100%!important;
+}
+.dropdown-content li a{
+    color: grey!important;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+}
+
+#content-bx{
+    overflow-y: auto;
+}
+.noLINE{
+    box-shadow: none!important;
+    border: none!important;
+}
+.collection{
+    border: none;
+}
+.collection li{
+    border-top: 1px solid grey;
+    margin-bottom: 5px!important;
+    box-shadow: 4px 4px 12px #858585!important;
+}
+
+#vault-section, #vault-content-section,#vault-custodial-section
+,#vault-payment-section{
+    border: 1px solid grey;
+    padding: 31px;
+    margin-bottom: 10px;
+}
+#vault-section .validate, #vault-content-section .validate,#vault-custodial-section .validate
+,#vault-payment-section .validate{
+    color: red;
+}
+
+.section1 .btn{
+    display: none;
+}
+.growBtn{
+    padding: 6px;
+}
+#btnMenu{
+    display: none;
+}
+#controller-2{
+    display: block;
+}
+#controller{
+    display: none;
+}
+
+@media screen and (max-width: 685px)
+and (min-width: 0){
+    #controller,#controller-2{
+        display: block;
+    }
+    #menu-bx{
+        display: none;
+        position: fixed!important;
+        z-index: 777;
+        width: 100%;
+    }
+    .cnt{
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+    #btnMenu{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+    }
+    .mContent{
+        width: 100%!important;
+    }
+    
+}
+
+#controller{
+    position: fixed;
+    left: 0;
+    z-index: 666;
+    width: 100%;
+    background:black;
+    bottom: 0;
+    box-shadow: 4px 4px 12px grey;
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+}
+.mmenu{
+    position: relative;
+}
+.mmenuLi li{
+    margin-top: 8px;
+    text-align: center;
+    border-top: 1px solid grey;
+}
+.menu-2 li{
+    border-bottom: 1px solid grey;
+    padding: 8px 0;
+}
+.underMenuLi li{
+    border: none;
+    width: 140px;
+    padding-left: 15px;
+    color: #a0a0a0;
+    font-size: 90%;
+}
+.underMenuLi li:hover{
+    color: rgb(10, 53, 119);
+    transition: 1s;
+    letter-spacing: 1px;
+}
+.underMenuActions{
+    color: rgb(10, 53, 119);
+    transition: 1s;
+    letter-spacing: 1px;
+}
+.section1{
+    display: none;
+}
+.navEff{
+    color: red;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.alertman{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 777;
+    left: 0;
+    top: 0;
+}
+.alertmanCenter{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.formControl form{
+    display: block;
+}
+
+.parentBX{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.centerman{
+    width: 100%;
+    background: red;
+    position:absolute;
+    top:77%;
+    left:39%;
+    margin-left:-100px;/* half width*/
+    margin-top:-300px;/* half height*/
+}
+
+.sideNav{
+    position: relative;
+    height: 100%;
+    background:black;
+    top: 0;
+    float: left;
+    width: 230px;
+}
+.sideNav ul li{
+    cursor: pointer;
+}
+.mContent{
+    float: left;
+    width: 66%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: relative;
+    padding: 10px;
+    margin-left: 3px;
+}
+.mCCBX{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+.mCTitle{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 5px;
+}
+.indicator-which-acc{
+    position: absolute;
+    top: 30px;
+    font-size: 10px;
+    width: 100%;
+}
+.iwaBX{
+    display: block;
+    text-align: center;
+    padding-left: 3px;
+}
+.mCCBX ul li{
+    text-transform: capitalize;
+    
+}
+#accVariable{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 3px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#accCTR{
+    width: 96%;
+    margin: auto;
+    margin-top: 4px;
+
+}
+#accCTR i{
+    color: grey;
+}
+
+.how-many{
+    text-align: center;
+    margin-top: 32px;
+    display: block;
+}
+.how-many a{
+    display: inline-block;
+    width: 30%;
+}
+.how-many a:hover{
+    color: red;
+}
+
+
+#banking .card{
+    box-shadow: 4px 4px 12px black;
+}
+#acc_transaction{
+    position: relative;
+}
+.amount_z{
+    text-align: right;
+}
+.editor_z{
+    box-shadow: 4px 4px 12px black;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
+    padding: 8px;
+}
+.editor_z .btn{
+    display: block;
+}
+.editor_btn_z{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+
+}
+.editor_btn_z a{
+    display: block;
+    margin-bottom: 10px;
+}
+.t_transaction{
+    text-transform: uppercase;
+}
+
+.transaction_z{
+    border-bottom: 1px solid grey;
+}
+
+#ID-BANK-BX1{
+
+}
+#ID-BANK-BX1 .card{
+    padding: 8px;
+    background: #b9b9b9;
+}
+
+#LOGINSBX{
+    overflow: hidden;
+}
+
+#controllergod span{
+    font-size: 11px;
+}
+
+.user-experience{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(255, 255, 255, 0.74);
+    z-index: 777;
+}
+#ui1 .card{
+    width: 250px;
+    margin: auto;
+    padding: 18px;
+}
+#ui1 .title{
+    text-align: center;
+    display: block;
+}
+
+.ans{
+    padding-left: 15px;
+    font-size: 15px;
+}
+.ans ul li{
+    display: block;
+    margin-top: 2px;
+}
+
+#content3{
+    position: fixed;
+    top: 0;
+    background: white;
+    width: 99%;
+    height: 100%;
+    background-image: url(../public/blood.jpg);
+    right:-211px;
+    background-size: contain;
+    background-position: unset;
+    overflow-y: auto;
+    
+}
+.C3BOX{
+    background: rgba(255, 255, 255, 0.952);
+    padding: 10px;
+    max-width: 900px;
+    margin-left: 10px;
+}
+.C3BOX .input-field{
+    position: relative;
+}
+.C3BOX .btn_box{
+    text-align: right;
+}
+.btn_box .btn{
+    display: none;
+}
+.btn_box .preloader-wrapper{
+    display: none;
+}
+.C3BOX .btn_box .btn{
+    width: 100px;
+}
+.C3BOX_title{    
+}
+
+#CTRACK  li{
+    border-radius: 3px;
+    padding: 30px;
+    width: 90%;
+    box-shadow: 4px 4px 12px grey;
+    position: relative;
+}
+#CTRACK input{
+    display: inline-block;
+}
+.CTRACK_STATUS{
+    display: block;
+}
+
+
+.add_card{
+    padding: 18px;
+    border-radius: 3px;
+    background: #dcdcdc;
+}
+.add_btn_box .btn{
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.xx_btms{
+    display: block;
+    height: 339px;
+}
+
+
+/* UPDATE 2.0 - SEPTEMBER 15 2022 */
+.CONTROL_BX{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 777;
+    background-color: white;
+}
+.CBX2{
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+}
+.CBX2_1{
+    width: 30%;
+    max-width: 300px;
+    min-width: 299px;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+}
+.CBX2_2{
+    width: 70%;
+    background-color: white;
+}
+
+
+.logo_bx_updt{
+    text-align: center;
+    margin: 8px;
+}
+.logo_bx_updt img{
+    width: 25%;
+    display: block;
+    margin: auto;
+}
+.portal_bx{
+    margin-top: 10px;
+}
+.portal_bx hr{
+    width: 55%;
+    
+    margin: auto;
+    display: block;
+}
+.portal_bx li {
+    color: white;
+    text-align: center;
+}
+.portal_bx li a{
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+.portal_bx li a:hover{
+    letter-spacing: 5px;
+    color: #6c0008;
+}
+#hide_menu_btn{
+    color: white;
+    position: relative;
+    float: right;
+    top: -65px;
+    right: 18px;
+    display: none;
+    border: 1px solid red;
+    border-radius: 50%;
+}
+#show_menu_btn{
+    color: black;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+@media screen and (max-width: 997px) 
+and (min-width: 0px){
+    .small_screen_menu_btn{
+        display: block;
+    }
+    #show_menu_btn{
+        display: block;
+    }
+    #hide_menu_btn{
+        display: block;
+    }
+
+    .CBX2_1{
+        position: absolute;
+        z-index: 778;
+    }
+    .CBX2_2{
+        width: 100%;
+    }
+}
+
+
+
+/* CBX_2 INPUT BXX */
+.input_bxx{
+    margin: auto;
+    width: 90%;
+    margin: auto;
+    margin-top: 68px;
+    overflow: hidden;
+}
+.inpbxx_col{
+    width: 50%;
+    float: left;
+}
+@media screen and (max-width: 392px) 
+and (min-width:0px){
+    .inpbxx_col{
+        width: 100%;
+    }
+    .inpbxx_col br{
+        display: none;
+    }
+    .ic{
+        padding: 10px!important;
+    }
+}
+
+.icl li, .icll li{
+    margin-top: 6px;
+    position: relative;
+}
+
+.ic{
+    width: 90%!important;
+    border: 1px solid #000000!important;
+    display: block;
+    border-radius: 3px!important;
+    margin: auto!important;
+    height: 98%!important;
+    padding: 3px;
+    font-size: 9px!important;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 12px #000;
+}
+.icll{
+}
+.lbl_{
+    position: absolute;
+    right: 5%;
+    font-size: 8px;
+    bottom: 1px;
+    color: #956e6e;
+    background-color: white;
+}
+
+.edt_btn_bx{
+    float: right;
+}
+.edbtn_a{
+    font-size: 11px!important;
+    background-color: #9e9e9e!important;
+}
+.edbtn_a:hover{
+    background-color: #000!important;
+    color: white;
+}
+.swxxch{
+    text-align: center;
+}
+.spx{
+    position: relative;
+}
+
+.transaction_section{
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
+.transaction_section table{
+    font-size: 12px!important;
+}
+.acc_num_trnx{
+    font-size: 60%!important;
+}
+.transaction_delete_btn{
+    color: #9e9e9e;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 12px!important;
+
+}::-webkit-search-cancel-button
+.transaction_delete_btn:hover{
+    color: #6c0008;
+}
+.transaction_save_btn{
+    color: #9e9e9e;
+    border: 1px solid;
+    margin-left: 3px;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 12px!important;
+}
+.transaction_save_btn:hover{
+    color: #0d9b54!important;
+}
+.transaction_delete_btn:hover{
+    color: #6c0008!important;
+}
+
+.transaction_history_body tr{
+    cursor: pointer;
+}
+
+.BBCTXT{
+    background-image:  linear-gradient(90deg,#7209d4,#2832d4 33%,#00a5b2)!important;
+    -webkit-background-clip: text;
+    color: transparent!important;
+}
+
+/* ONLINE LOGIN UPDATES  */
+.clients_online_logs{
+    margin-top: 192px;
+}
+.clgs ul li{
+    width: 98%;
+    border: 1px solid grey;
+    position: relative;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.219);
+    margin: auto;
+    margin-top: 4px;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+}
+.nb_bx_2{
+    width: 75%;
+    margin-left: 1%;
+    display: inline-block;
+    text-align: left;
+}
+.nb_bx_22{
+    width: 20%;
+    margin-left: 1%;
+    display: inline-block;
+}
+.nbbx_right{
+    text-align: right;
+    color: #00000059;
+    font-size: 10px;
+}
+.date-account{
+    font-size: 12px;
+}

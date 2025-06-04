@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="cp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link rel="icon" href="head.png">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+
+    <div class="CONTROL_BX hide">
+      <div class="CBX2 CBX2_1">
+        <div class="logo_bx_updt">
+            <img src="alien.png" >
+        </div>
+        <i class="material-icons red-text" id="hide_menu_btn" onclick="CLOSE_MENU_BX();">close</i>
+        <br>
+        <ul class="portal_bx">
+          <li>
+            <a class="bat_links btl_1" onclick="GET_LOGS('account1'); GETBANKSERVICES_1('BANKSERVICES','account1');  
+            GETBANKTRANSFERS_1('account1')">BANK ACC 1</a>
+          </li>
+          <li>
+            <a class="bat_links btl_2" onclick="GET_LOGS('account2'); GETBANKSERVICES_1('BANKSERVICES','account2');  
+            GETBANKTRANSFERS_1('account2')">BANK ACC 2</a>
+          </li>
+          <li>
+            <a class="bat_links btl_3" onclick="GET_LOGS('account3'); GETBANKSERVICES_1('BANKSERVICES','account3');  
+            GETBANKTRANSFERS_1('account3')">BANK ACC 3</a>
+          </li>
+          <li>
+            <a class="bat_links" onclick="GET_LOGS('account4'); GETBANKSERVICES_1('BANKSERVICES','account4');  
+            GETBANKTRANSFERS_1('account4')">BANK ACC 4</a>
+          </li>
+          <!-- VAULT SECTION -->
+          <br>
+        </ul>
+      </div>
+      <div class="CBX2 CBX2_2">
+        <h5 style="margin-left: 18px;" class="BBCTXT">ACCOUNT-DETAILS</h5>
+        <i class="material-icons" id="show_menu_btn" onclick="SHOW_MENU_BX();">dehaze</i>
+
+        <div class="input_bxx BANK_ACCOUNT_SECTION hide">
+          <div class="switch swxxch">
+            <label>
+              <span id="acc_inactive_1" class="active_inactive">Account Inactive</span>
+              <input class="god_switch" type="checkbox" onclick="ACCOUNT_ACTIVE_INACTIVE_1();">
+              <span class="lever"></span>
+              <span id="acc_active_1" class="active_inactive">Account Active</span>
+            </label>
+          </div>
+          <ul class="inpbxx_col icl ">
+            <li>
+              <input type="text" placeholder=" " class="ic HOLDR_NAME" style="padding: 9px;">
+              <span class="lbl_ BBCTXT">
+                  Name
+              </span>
+            </li>
+            <li>
+              <input type="text" placeholder=" " class="ic HOLDR_BALANCE" style="padding: 9px;">
+              <span class="lbl_ BBCTXT">
+                Balance $
+              </span>
+            </li>
+
+            <br>
+          </ul>
+
+          <ul class="inpbxx_col icll">
+            <li>
+              <input type="text" placeholder=" " class="ic HOLDR_ADDRESS" style="padding: 9px;">
+              <span class="lbl_ BBCTXT">
+                Address
+              </span>
+            </li>
+            <li>
+              <input type="text" placeholder=" " class="ic HOLDR_EMAIL" style="padding: 9px;">
+              <span class="lbl_ BBCTXT">
+                Email
+              </span>
+            </li>
+
+            <br>
+          </ul>
+
+          <div class="edt_btn_bx">
+            <a class="btn edbtn_a" onclick="SAVE_BANK_USER_INFORMATION_1();">
+              
+              Save <i class="material-icons left">save</i>
+            </a>
+            <i class="fa fa-spinner fa-spin  spx hide"></i>
+
+
+          </div>
+
+          <div class="clients_online_logs clgs">
+            <h5>LOGS</h5>
+                 <ul class="bank_logins_logs">
+                  <li>
+                    <span class="nb_bx_2 date-account">
+                      November 14, 2022 | ACCOUNT100 | 
+                    </span>
+                    <span class="nb_bx_2 nbbx_right">
+                      102.176.94.85GH_ACCRA
+                    </span>
+                  </li>
+
+                  <li class="">
+                    <span class="nb_bx_2 date-account">
+                      November 14, 2022 | ACCOUNT100 | 
+                    </span>
+                    <span class="nb_bx_2 nbbx_right">
+                      102.176.94.85GH_ACCRA
+                    </span>
+                  </li>
+                 </ul>
+          </div>
+
+          <div class="transaction_section">
+            <h5>TRANSACTIONS</h5>
+            <div class="ADD_NEW_TRANSACTION">
+              <a id="add_to_transaction_btn" class="btn blue right" onclick="ADD_TO_TRANSACTIONS_1();">Add New Transaction</a>
+            </div>
+            <table class="responsive-table striped">
+              <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Description </th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th> </th>
+                </tr>
+              </thead>
+      
+              <tbody class="transaction_history_body">
+                <tr class="" onmouseover="mouseOver();">
+                  <td onClick="this.contentEditable='true';">1</td>
+                  <td onClick="this.contentEditable='true';">Payment receiived from JHNGHARTEW <span class="acc_num_trnx"></span>(23568)</td>
+                  <td onClick="this.contentEditable='true';">$0.87</td>
+                  <td onClick="this.contentEditable='true';">22 September 2022</td>
+                  <td>
+                    <i class="material-icons transaction_delete_btn">delete</i>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- VAULT SECTION -->
+        <div class="input_bxx VAULT_ACCOUNT_SECTION">
+          <h5>VAULT INFORMATION</h5>
+
+          <!-- VAULT CONTINUES INPUTS -->
+          <div class="VAULT_ACCOUNT_SECTION">
+            <ul class="inpbxx_col icl">
+              <li>
+                <input type="text" placeholder=" " class="ic DEPOSITOR_NAME" style="padding: 9px;">
+                <span class="lbl_ BBCTXT">
+                  Depositor name
+                </span>
+              </li>
+              <li>
+                <input type="text" placeholder=" " class="ic DEPOSITOR_EMAIL" style="padding: 9px;">
+                <span class="lbl_ BBCTXT">
+                  Represented by
+                </span>
+              </li>
+
+              <li>
+                <input type="text" placeholder=" " class="ic INITIAL_DEPOSIT_VAULT" style="padding: 9px;">
+                <span class="lbl_ BBCTXT">
+                  Initial Deposit
+                </span>
+              </li>
+  
+              <br>
+            </ul>
+  
+            <ul class="inpbxx_col icll">
+              <li>
+                <input type="text" placeholder=" " class="ic DEPOSITOR_ADDRESS" style="padding: 9px;">
+                <span class="lbl_ BBCTXT">
+                  Depositor Email Address
+                </span>
+              </li>
+              <li>
+                <input type="text" placeholder=" " class="ic NEXT_OF_KIN_VAULT" style="padding: 9px;">
+                <span class="lbl_ BBCTXT">
+                  Next of kin
+                </span>
+              </li>
+              <li>
+                <input type="text" placeholder=" " class="ic NEXT_OF_KIN_VAULT" style="padding: 9px;">
+                <span class="lbl_ BBCTXT">
+                  Depositor Home Address
+                </span>
+              </li>
+              <h5></h5>
+  
+              <br>
+            </ul>
+            <br><br><br><br><br><br><br>
+            <hr>
+
+            <!--  -->
+          </div>
+
+          <div class="edt_btn_bx">
+            <a class="btn edbtn_a" onclick="SAVE_BANK_USER_INFORMATION_1();">
+              
+              Save <i class="material-icons left">save</i>
+            </a>
+            <i class="fa fa-spinner fa-spin  spx hide"></i>
+
+
+          </div>
+
+        </div>
+
+        <br><br><br><br>
+      </div>
+
+    </div>
+
+
+    <div class="BANKMANAGER BM">
+      <div class="row BMCOL" id="BMCOL">
+        <div class="col s12 m5 l4 BM_CARD_CONTAINER NB1 hide">
+
+          <div class="card-panel">
+            <span class="teal-text flow-text" style="text-align: center;">TRANSFER REQUEST</span>
+            <hr>
+            <div class="xx_btms">
+              
+              <div class="row">
+                <div class="col s6">
+                  <label for="">
+                    Receiver Name:
+                  </label> 
+                  <input type="text" id="bm_receiver">
+                </div>
+                <div class="col s6">
+                  <label for="">
+                    Bank Name:
+                  </label> 
+                  <input type="text" id="bm_receiver">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6">
+                  <label for="">
+                    Account Number:
+                  </label> 
+                  <input type="text" id="bm_account_number">
+                </div>
+                <div class="col s6">
+                  <label for="">
+                    Routing Number:
+                  </label> 
+                  <input type="text" id="bm_routing_number">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6">
+                  <label for="">
+                    Bank Address:
+                  </label> 
+                  <input type="text" id="bm_address">
+                </div>
+                <div class="col s6">
+                  <label for="">
+                    Code:
+                  </label> 
+                  <input type="text" id="bm_code">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s12">
+                  <label for="">
+                    Amount:
+                  </label> 
+                  <input type="text" id="bm_amount">
+                </div>
+              </div>
+
+              <div class="row fromWhichAcc">
+                <p>FROM <span class="bm_from_acc"></span></p>
+              </div>
+
+            </div>
+
+            <div class="cd-btns">
+              <a class="btn red">REJECT <i class="material-icons right">close</i> </a>
+              <a class="btn">ADD <i class="material-icons right">add</i> </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!--08/10/2021-->
+      </div>
+    </div>
+
+
+
+    <div id="controller" class="flow-text">
+            <!-- Switch -->
+              <div class="switch">
+                <label>
+                  <span class="v1 black-text">Vault 1</span>
+                  <input type="checkbox">
+                  <span class="lever red" onclick="accStatePro();"></span>
+                  <span class="v2 black-text">Vault 2</span>
+                </label>
+              </div>
+    </div>
+
+
+    <div class="GOD">
+
+      <div class="ECOMMERCE">
+
+      </div>
+      
+      <div class="user-experience hide" id="ui1">
+        <div class="card">
+          <span class="title">PLEASE WAIT</span>
+          <div class="progress red">
+            <div class="indeterminate white"></div>
+          </div>
+        </div>
+      </div>
+
+    
+        <!--
+          $
+          $   SIDE NAVIGATION
+        -->
+        <div class="sideNav black white-text" id="menu-bx" style="position: relative;">
+          <i class="fa-li fa  nvb-spinner" id="nvbloader"></i>
+            <div class="sideNavVault hide">
+              <div class="mCTitle">
+                <i class="material-icons left">keyboard_return</i>
+                <span onclick="hideMenu()" style="position: absolute;left: 32px;">GO BACK</span>
+              </div>
+              <div class="indicator-which-acc">
+                <span class="iwaBX grey-text">
+                  You have complete access to
+                  <br> <span id="accVariable" class="green-text"></span>
+                </span>
+                <div id="accCTR" class="hide">
+                  <i class="material-icons left">arrow_backward</i>
+                  <i class="material-icons right">arrow_forward</i>
+                </div>
+                <div class="how-many">
+                  <a id="a1" onclick="changeAccounts(1)">Account1</a>
+                  <a id="a2" onclick="changeAccounts(2)">Account2</a>
+                  <a id="a3" onclick="changeAccounts(3)">Account3</a>
+                </div>
+              </div>
+             <div class="sN mCCBX">
+              <ul>
+                <li onclick="navigator('dashboard'); hideMenu();" id="dashboard-nav">dashboard</li>
+                <br>
+                <LI onclick="navigator('changeemail'); hideMenu();" id="email-nav">change email</LI>
+                <br>
+                <li onclick="navigator('changepassword'); hideMenu();"id="password-nav">change password</li>
+              </ul>
+             </div>
+            </div>
+
+            <div class="sideNavVault sideNavHome">
+             
+
+              <div class="NAVBAR_002">  
+                <h3 class="flow-text NAV_TITLE" id="NAV_BANK"> BANK ACC </h3>
+                <div id="nvbinputbar">
+                  <input type="text"  value="1" id="WHICHACC-INPUT">
+                  <i class="material-icons SHOWACCOUNTDETAILS">arrow_forward</i>
+                </div>
+              </div>
+
+
+ 
+              <div class="indicator-which-acc hide">
+                <span class="iwaBX grey-text">
+                  Balance:
+                  <br> <span id="accVariable" class="green-text"></span>
+                </span>
+                <div id="accCTR" class="hide">
+                  <i class="material-icons left">arrow_backward</i>
+                  <i class="material-icons right">arrow_forward</i>
+                </div>
+              </div>
+            </div>
+
+           
+
+            <div class="HIMSELF" onclick="hideMenu(); COMMAND_SEND_TRANSFERSERVICES();"></div>
+        </div>
+        <!--
+          $
+          $/////   SIDE NAVIGATION
+        -->
+
+        <!--UPDATE 0.0.1-->
+        <div class="BOARD hide" id="contentBoard">
+         <div class="BOX001">
+            <h6>CONSIGNMENT INFORMATION</h6>
+            <hr>  
+
+            <div class="input-fields ifs" id="trackingNumberBX">
+              <label for="">Tracking Number</label>
+              <input type="text" value="GER12345555478USD">
+              <br>
+              <a class="btnn hide">Save</a>
+            </div>
+
+            <div class="input-fields ifs" id="shipmentDate">
+              <label for="">Shipment Date</label>
+              <input type="text" value="23/06/2021">
+              <br>
+              <a class="btnn hide">Save</a>
+            </div>
+
+            <div class="input-fields ifs" id="billOfLaden">
+              <label for="">B/L No.</label>
+              <input type="text" value="OCW7854QH+">
+              <br>
+              <a class="btnn hide">Save</a>
+            </div>
+
+            <div class="input-fields ifs" id="containerNo">
+              <label for="">Container No.</label>
+              <input type="text" value="OCWM177">
+              <br>
+              <a class="btnn hide">Save</a>
+            </div>
+            <div class="input-fields ifs" id="carrier">
+              <label for="">Carrier</label>
+              <input type="text" value="OCWM700">
+              <br>
+              <a class="btnn hide">Save</a>
+            </div>
+
+         </div>
+         <div class="BOX001">
+          <h6>SHIPMENT TRACKING DETAILS</h6>
+          <hr> 
+          <ul class="" id="BXXC">
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                      <th>Location</th>
+                      <th>Moves</th>
+                      <th>Date</th>
+                      <th>Vessel</th>
+                  </tr>
+                </thead>
+        
+                <tbody id="THXBHT">
+                  <tr>
+                    <td>
+                      <input type="text" value="Dubai">
+                      <a class="btn">Save</a>
+                    </td>
+                    <td>
+                      <input type="text" name="" id="" value="INFORMATION RECEIVED FOR SHIPMENT">
+                      <a class="btn">Save</a>
+                    </td>
+                    <td>
+                      <input type="text" value="10:05, JUNE 22, 2021">
+                      <a class="btn">Save</a>
+                    </td>
+                    <td>
+                      <input type="text" value="OCW VESSEL">
+                      <a class="btn">Save</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </ul>
+
+         </div>
+        </div>
+        <!--END UPDATE 0.0.1-->
+
+        <!--DEPRECATED-->
+        <div class="white FH mContent" id="content-bx">
+          <div class="hide ALL_CONTENTS" id="content1">
+            <div class="progress white hide" id="progress-3">
+              <div class="indeterminate red"></div>
+            </div>
+              <div id="controller" class="flow-text sections">
+                  <!-- Switch -->
+                  <div class="how-many">
+                    <a id="a1" onclick="changeAccounts(1)">
+                      <i class="material-icons">lock</i>
+                      <br>
+                      Account1</a>
+                    <a id="a2" onclick="changeAccounts(2)">
+                      <i class="material-icons">lock</i>
+                      <br>
+                      Account2</a>
+                    <a id="a3" onclick="changeAccounts(3)">
+                      <i class="material-icons">lock</i>
+                      <br>
+                      Account3</a>
+                  </div>
+             </div>
+              <i class="material-icons" id="btnMenu" onclick="openMenu()">dehaze</i>
+  
+  
+              <div class="sections section2">
+                <div class="alertman black hide" id="emailPASSWORD">
+                  <div class="alertmanCenter white-text" style="text-align: center;">
+                    <i class="material-icons green-text">done_all</i>
+                    <p class="flow-text">Successfully  <span class="green-text flow-text">Updated</span></p>
+                  </div>
+                </div>
+  
+                <div class="sTitle flow-texts">
+                  Vault Account Console
+                </div>
+  
+                
+                <div id="emailSectionDisplay">
+                  <p class="flow-text">
+                    <span class="blue-text" id="whichAcc"></span> 
+                    ( <span id="whichAccCode" style="font-size: 15px;font-style: italic;"></span> )
+                    email is currently <span id="currentEmail" class="red-text">NOT-AVAILABLE</span>
+                    and your password is set to 
+                    <span id="currentPassword" class="red-text">NOT-AVAILABLE</span>
+                  </p>
+                </div>
+  
+                <div class="row formControl">
+                  <form class="col s12 E-PFORM emailCHANGEBOX" id="changeEmailForm">
+                    <div class="row" style="margin-bottom: 0;">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">mail</i>
+                        <input id="change_email" type="text" class="validate">
+                        <p class="container red-text errorTxt" style="font-size: 10px;"></p>
+                        <label for="change_email">Enter your new email here...</label>
+                      </div>
+                    </div>
+                    <div style="text-align: right;">
+                      <a onclick="change('email')" id="changePasswordBtn" class="waves-effect waves-light btn blue"><i class="material-icons left">save</i>Change</a>
+                      <p id="changeEmailBtn" class="btn-default" onclick="signupSIGNIN()"><a>Do you want to change <span class="blue-text">password</span> instead</a></p>
+                      <div class="container" style="text-align: right;" >
+                        <div class="preloader-wrapper small active hide">
+                          <div class="spinner-layer spinner-green-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <form class="col s12 E-PFORM passwordCHANGEBOX hide" id="changePasswordForm">
+                    <div class="row" style="margin-bottom: 0;">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="change_password" type="text" class="validate" placeholder="Change Password Here">
+                        <label for="change_password">New Password</label>
+                      </div>
+                    </div>
+                    <div style="text-align: right;">
+                      <a onclick="change('password')" class="waves-effect waves-light btn blue"><i class="material-icons left">save</i>Change (p)</a>
+                      <p  class="btn-default" onclick="signupSIGNIN()"><a>Do you want to change <span class="blue-text">email</span> instead?</a></p>
+                    </div>
+                    
+                  </form>
+                  <div class="container" style="text-align: right;" >
+                    <div class="preloader-wrapper small active hide">
+                      <div class="spinner-layer spinner-green-only">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+          
+              </div>
+  
+              <span class="TXT flow-text red-text section1"> VAULT</span>
+      
+            
+              <div class="row hide bankShipiment" id="dashboard-section">
+                  <div class="col s6">
+                      <div class="card black darken-1" id="bank-controller">
+                          <div class="card-content white-text">
+                              <div class="card-img-bx" style="width: 50px; margin:auto;">
+                                  <img src="face.PNG" alt="" class="circle">
+                              </div>
+                            <span class="card-title xnx">Bank</span>
+                            <blockquote class="bank-det">Bank Details</blockquote>
+                            <div class="sr-info-bx nav1 navs white-text">
+                                <div class="input-field col s12">
+                                  <input placeholder="" id="ah_name" type="text" class="validate">
+                                  <label for="ah_name">Account Holder Name</label>
+                                </div>
+                                <div class="input-field col s12">
+                                  <input placeholder="" id="ah_balance" type="text" class="validate">
+                                  <label for="ah_balance">Account Holder Balance</label>
+                                </div>
+                                <div class="input-field col s12">
+                                  <input placeholder="" id="ah_address" type="text" class="validate">
+                                  <label for="ah_address">Account Holder Address</label>
+                                </div>
+                              </div>
+  
+                              <div class="sr-info-bx noLINE navs nav2 hide">
+                                  <ul class="collection black">
+                                      <li class="collection-item black"> 
+                                          <span id="ed_amount" class="green-text">$700.00</span> 
+                                          <span id="ed_transaction">debited from</span>
+                                          ac xxxx6060
+                                          <span id="ed_transaction_name" class="blue-text">POS PURCHASE-US WASHINGTON</span>
+                                          Your available balance is 
+                                          <span id="ed_available_balance" class="green-text">$17,000.00</span>
+                                      </li>
+  
+                                      <li class="collection-item black"> 
+                                          <span id="ed_amount" class="green-text">$700.00</span> 
+                                          <span id="ed_transaction">debited from</span>
+                                          ac xxxx6060
+                                          <span id="ed_transaction_name"class="blue-text">POS PURCHASE-US WASHINGTON</span>
+                                          Your available balance is 
+                                          <span id="ed_available_balance" class="green-text">$17,000.00</span>
+                                      </li>
+                                  </ul>
+                              </div>
+  
+                              <div class="sr-info-bx noLINE navs nav3 hide">
+                                  <ul class="collection black">
+                                      <li class="collection-item black"><div>Your account is <span class="green-text" id="ed_account_status">ACTIVE</span> <a href="#!" class="secondary-content"><i class="material-icons">done_all</i></a></div></li>
+                                  </ul>
+                              </div>
+                          <ul class="pagination xnx">
+                              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                              <li class="navC navC1 active" onclick="navigator(1)"><a href="#!">1</a></li>
+                              <li class="navC navC2 waves-effect" onclick="navigator(2)"><a>2</a></li>
+                              <li class="navC navC3 waves-effect" onclick="navigator(3)"><a>3</a></li>
+                              <li class="navC navC4 waves-effect"><a>4</a></li>
+                              <li class="navC navC5 waves-effect"><a>5</a></li>
+                              <li class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
+                          </ul>
+                          <div class="progress white hide" id="progress-1">
+                              <div class="indeterminate red"></div>
+                          </div>
+                          </div>
+                          <div class="card-action">
+                              <div class="row">
+                                  <div class="col s6 white-text xnx" style="border-right: 1px solid;">
+                                      <button onclick="editor()">Load +</button>
+                                  </div>
+                                  <div class="col s6  xnx red-text">
+                                      Cancel
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                  </div>
+  
+                  <div class="col s6">
+                      <div class="card black darken-1" id="bank-controller">
+                          <div class="card-content white-text">
+                              <div class="card-img-bx" style="width: 50px; margin:auto;">
+                                  <img src="face.PNG" alt="" class="circle">
+                              </div>
+                              <span class="card-title xnx">Shipment</span>
+                              <blockquote>Sender Information</blockquote>
+                              <div class="sr-info-bx">
+                                  <div class="input-field col s12">
+                                      <input placeholder="" id="ship_sender" type="text" class="validate">
+                                      <label for="ship_sender">Sender Name</label>
+                                    </div>
+                              </div>
+                              <ul class="pagination xnx">
+                                  <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                                  <li class="active"><a href="#!">1</a></li>
+                                  <li class="waves-effect"><a href="#!">2</a></li>
+                                  <li class="waves-effect"><a href="#!">3</a></li>
+                                  <li class="waves-effect"><a href="#!">4</a></li>
+                                  <li class="waves-effect"><a href="#!">5</a></li>
+                                  <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                              </ul>
+                              <div class="progress white hide" id="progress-2">
+                                  <div class="indeterminate red"></div>
+                              </div>
+                            <p class="xnx"></p>
+                          </div>
+                          <div class="card-action">
+                              <div class="row">
+                                  <div class="col s6 white-text xnx" style="border-right: 1px solid;">
+                                      <button onclick="getVaultDetails('account1')">Load</button>
+                                  </div>
+                                  <div class="col s6  xnx red-text">
+                                      Cancel
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+  
+              <!-- VAULT -->
+              <div class="sections section1" id="vault-section">
+                  
+                  <blockquote>
+                      Vault Profile
+                    </blockquote>
+                    <div class="row">
+                      <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12 m6" id="depositorName">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input onclick="inputClicked(1);" id="depositor_name" type="text" placeholder="Loading..." class="validate">
+                                <label for="depositor_name"> Depositor Name: </label>
+                              <div class="row" style="text-align: right;">
+                                  <a class="btn" onclick="changeThisField(1);">Change</a>
+                              </div>
+                            </div>
+                            <div class="input-field col s12 m6" id="representedBy">
+                              <i class="material-icons prefix">gavel</i>
+                              <input onclick="inputClicked(2);" id="represented_by" type="text" placeholder="Loading..." class="validate">
+                              <label for="represented_by"> Represented by: </label>
+                              <div class="row" style="text-align: right;">
+                                  <a class="btn" onclick="changeThisField(2);">Change</a>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <div class="row">
+                              <div class="input-field col s12 m6" id="depositorAddress">
+                                <i class="material-icons prefix">mail</i>
+                                <input onclick="inputClicked(3);" id="depositor_address" type="text" placeholder="Loading..." class="validate">
+                                <label for="depositor_address"> Depositor Address: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(3);">Change</a>
+                                </div>
+                              </div>
+                              <div class="input-field col s12 m6" id="nextOfKin">
+                                <i class="material-icons prefix">child_friendly</i>
+                                <input onclick="inputClicked(4);" id="next_of_kin" type="text" placeholder="Loading..." class="validate">
+                                <label for="next_of_kin"> Next of kin: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(4);">Change</a>
+                                </div>
+                              </div>
+                          </div>
+  
+                          <div class="row">
+                              <div class="input-field col s12 m6" id="initialDeposit">
+                                <i class="material-icons prefix">alarm</i>
+                                <input onclick="inputClicked(5);" id="initial_deposit" type="text" placeholder="Loading..." class="validate">
+                                <label for="initial_deposit"> Initial Deposit: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(5);">Change</a>
+                                </div>
+                              </div>
+                              <div class="input-field col s12 m6" id="addressDepositor">
+                                <i class="material-icons prefix">add_location</i>
+                                <input onclick="inputClicked(6);" id="address_depositor" type="text" placeholder="Loading..." class="validate">
+                                <label for="address_depositor"> Address: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(6);">Change</a>
+                                </div>
+                              </div>
+                          </div>
+                        </form>
+                    
+                    </div>
+              </div>
+  
+              <div class="sections section1" id="vault-content-section">
+                  <blockquote>
+                      Vault Contents
+                    </blockquote>
+                    <div class="row">
+                      <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12 m6" id="contentItem">
+                                <i class="material-icons prefix">content_paste</i>
+                                <input onclick="inputClicked(7);" id="content_item" type="text" placeholder="Loading..." class="validate">
+                                <label for="content_item"> Item: </label>
+                              <div class="row" style="text-align: right;">
+                                  <a class="btn" onclick="changeThisField(7);">Change</a>
+                              </div>
+                            </div>
+                            <div class="input-field col s12 m6" id="contentBoxType">
+                              <i class="material-icons prefix">class</i>
+                              <input onclick="inputClicked(8);" id="content_box_type" type="text" placeholder="Loading..." class="validate">
+                              <label for="content_box_type"> Box Type: </label>
+                              <div class="row" style="text-align: right;">
+                                  <a class="btn" onclick="changeThisField(8);">Change</a>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <div class="row">
+                              <div class="input-field col s12 m6" id="contentBoxQuantity">
+                                <i class="material-icons prefix">timelapse</i>
+                                <input onclick="inputClicked(9);" id="content_box_quantity" type="text" placeholder="Loading..." class="validate">
+                                <label for="content_box_quantity"> Box Quantity: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(9);">Change</a>
+                                </div>
+                              </div>
+                              <div class="input-field col s12 m6" id="contentDuration">
+                                <i class="material-icons prefix">timeline</i>
+                                <input onclick="inputClicked(10);" id="content_duration" type="text" placeholder="Loading..." class="validate">
+                                <label for="content_duration"> Duration: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(10);">Change</a>
+                                </div>
+                              </div>
+                          </div>
+  
+                          <div class="row">
+                              <div class="input-field col s12 m6" id="contentTotal">
+                                <i class="material-icons prefix">attach_money</i>
+                                <input onclick="inputClicked(11);" id="content_total" type="text" placeholder="Loading..." class="validate">
+                                <label for="content_total"> Total: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(11);">Change</a>
+                                </div>
+                              </div>
+                              <div class="input-field col s12 m6" id="contentDate">
+                                <i class="material-icons prefix">date_range</i>
+                                <input onclick="inputClicked(12);" id="content_date" type="text" placeholder="Loading..." class="validate">
+                                <label for="content_date"> Date: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(12);">Change</a>
+                                </div>
+                              </div>
+                          </div>
+                        </form>
+                    
+                    </div>
+              </div>
+  
+              <div class="sections section1" id="vault-custodial-section">
+                  <blockquote>
+                      Vault Custodial Records
+                    </blockquote>
+                    <div class="row">
+                      <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12 m6" id="custodialRefNo">
+                                <i class="material-icons prefix">confirmation_number</i>
+                                <input onclick="inputClicked(13);" id="custodial_ref_no" type="text" placeholder="Loading..." class="validate">
+                                <label for="custodial_ref_no"> Ref No: </label>
+                              <div class="row" style="text-align: right;">
+                                  <a class="btn" onclick="changeThisField(13);">Change</a>
+                              </div>
+                            </div>
+                            <div class="input-field col s12 m6" id="custodialIssueDate">
+                              <i class="material-icons prefix">date_range</i>
+                              <input onclick="inputClicked(14);" id="custodial_issue_date" type="text" placeholder="Loading..." class="validate">
+                              <label for="custodial_issue_date"> Issue Date: </label>
+                              <div class="row" style="text-align: right;">
+                                  <a class="btn" onclick="changeThisField(14);">Change</a>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <div class="row">
+                              <div class="input-field col s12 m6" id="custodialRelease">
+                                <i class="material-icons prefix">check_box</i>
+                                <input  onclick="inputClicked(15);" id="custodial_release" type="text" placeholder="Loading..." class="validate">
+                                <label for="custodial_release"> Release: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(15);">Change</a>
+                                </div>
+                              </div>
+                              <div class="input-field col s12 m6" id="custodialExtension">
+                                <i class="material-icons prefix">exit_to_app</i>
+                                <input onclick="inputClicked(16);" id="custodial_extension" type="text" placeholder="Loading..." class="validate">
+                                <label for="custodial_extension"> Custodial Extension: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(16);">Change</a>
+                                </div>
+                              </div>
+                          </div>
+  
+                          <div class="row">
+                              <div class="input-field col s12 m6" id="custodialDaysLeft">
+                                <i class="material-icons prefix">event_available</i>
+                                <input onclick="inputClicked(17);" id="custodial_days_left" type="text" placeholder="Loading..." class="validate">
+                                <label for="custodial_days_left"> Days Left: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(17);">Change</a>
+                                </div>
+                              </div>
+                              <div class="input-field col s12 m6" id="custodialLastUpdatedDate">
+                                <i class="material-icons prefix">expand_more</i>
+                                <input onclick="inputClicked(18);" id="custodial_last_updated_date" type="text" placeholder="Loading..." class="validate">
+                                <label for="custodial_last_updated_date"> Last Updated Date: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(18);">Change</a>
+                                </div>
+                              </div>
+                          </div>
+                        </form>
+                    
+                    </div>
+              </div>
+  
+              <div class="sections section1" id="vault-payment-section">
+                  <blockquote>
+                      Vault Payment History
+                    </blockquote>
+                    <div class="row">
+                      <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12 m6" id="amountPaid">
+                                <i class="material-icons prefix">attach_money</i>
+                                <input onclick="inputClicked(19);" id="payment_paid" type="text" placeholder="Loading..." class="validate">
+                                <label for="payment_paid"> Amount Paid: </label>
+                              <div class="row" style="text-align: right;">
+                                  <a class="btn" onclick="changeThisField(19);">Change</a>
+                              </div>
+                            </div>
+                            <div class="input-field col s12 m6" id="paymentBalance">
+                              <i class="material-icons prefix">monetization_on</i>
+                              <input onclick="inputClicked(20);" id="payment_balance" type="text" placeholder="Loading..." class="validate">
+                              <label for="payment_balance"> Balance: </label>
+                              <div class="row" style="text-align: right;">
+                                  <a class="btn" onclick="changeThisField(20);">Change</a>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <div class="row">
+                              <div class="input-field col s12 m6" id="paymentContent">
+                                <i class="material-icons prefix">next_week</i>
+                                <input onclick="inputClicked(21);" id="payment_content" type="text" placeholder="Loading..." class="validate">
+                                <label for="payment_content"> Content: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(21);">Change</a>
+                                </div>
+                              </div>
+                              <div class="input-field col s12 m6" id="paymentTime">
+                                <i class="material-icons prefix">alarm</i>
+                                <input onclick="inputClicked(22);" id="payment_time" type="text" placeholder="Loading..." class="validate">
+                                <label for="payment_time"> Time: </label>
+                                <div class="row" style="text-align: right;">
+                                    <a class="btn" onclick="changeThisField(22);">Change</a>
+                                </div>
+                              </div>
+                          </div>
+                        </form>
+                    
+                    </div>
+              </div>
+          </div>
+
+
+          <div class="hide ALL_CONTENTS" id="content2">
+            <div class="progress white hide" id="progress-3">
+              <div class="indeterminate red"></div>
+            </div>
+              <i class="material-icons" id="btnMenu" onclick="openMenu()">dehaze</i>
+  
+              <span class="TXT flow-text red-text section1"> BANK SERVICES</span>
+  
+            
+
+            <div class="BANKING_SERVICE BS">
+              <div class="row">
+                <h3 class="teal-text flow-text BBCTXT">BANK ACCOUNT 22</h3>
+                <form class="col s12 CDFORM">
+                  <div id="reload">
+                    <a class="material-icons" onclick="RELOAD_BANK_ACCOUNT();" style="cursor: pointer;">cached</a>
+                    <i class="fa fa-spinner fa-spin hide"></i>
+                  </div>
+                  <br>
+                  <div class="switch">
+                    <label>
+                      <span id="acc_inactive" class="active_inactive">Account Inactive</span>
+                      <input type="checkbox" onclick="ACCOUNT_ACTIVE_INACTIVE();">
+                      <span class="lever"></span>
+                      <span id="acc_active" class="active_inactive">Account Active</span>
+                    </label>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="BANK_ACCOUNT_NAME" type="text" class="validate" value=" ">
+                      <label for="BANK_ACCOUNT_NAME">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">attach_money</i>
+                      <input id="BANK_ACCOUNT_BALANCE" type="tel" class="validate" value=" ">
+                      <label for="BANK_ACCOUNT_BALANCE">Balance</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">add_location</i>
+                      <input id="BANK_ACCOUNT_ADDRESS" type="tel" class="validate" value=" ">
+                      <label for="BANK_ACCOUNT_ADDRESS">Address</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">add_location</i>
+                      <input id="BANK_ACCOUNT_EMAIL" type="tel" class="validate" value=" ">
+                      <label for="BANK_ACCOUNT_EMAIL">Email</label>
+                    </div>
+                  </div>
+                  <div class="row align_center SBI_BOX">
+                      <a class="btn" id="SAVE_BANK_INFORMATION" onclick="SAVE_BANK_USER_INFORMATION();">Save</a>
+                      <i class="fa fa-spinner fa-spin hide" aria-hidden="true"></i>
+                  </div>
+
+                </form>
+              </div>
+
+              <div class="row">
+                <h3 class="teal-text flow-text RC_title hide">RECENT TRANSACTIONS</h3>
+                <ul class="BANK_SERVICE_RECENT_TRANSACTIONS BSRT">
+                  <li class="hide">
+                    <input class="orderNumber" type="text" value="1">
+                    <div class="col s8">
+                      <i class="material-icons left">check</i>
+                      <span class="BSRT_transaction">
+                        <span class="teal-text">$80,000.00</span>
+                        transferred to GLOBAL PLAY MUSIC INTELL LLC
+                        <div class="BSRT_transactionType">
+                          <a class="btn ">Debit</a>
+                          <a class="btn blue">Credit</a>
+                          <a class="btn teal lighten-3">Pending Debit</a>
+                          <a class="btn blue lighten-3">Pending Credit</a>
+                          <a class="btn red">Failed</a>
+                        </div>
+                      </span>
+                    </div>
+                    <div class="col s4 BSRT_balanceDate">
+                      <span class="teal-text">$80,000.00</span>
+                      <input type="text" name="" id="" placeholder="eg: $100,000.00">
+                      <br>
+                      <span class="BSRT_date">July 23, 2021</span>
+                      <input type="text" name="" id="" placeholder="eg: July 04, 2021">
+                    </div>
+
+                    <div class="col s12 BSRT_btnBox">
+                      <a class="btn">Save</a>
+                      <a class="btn red">Delete</a>
+                      <i class="fa fa-spinner fa-spin teal-text" aria-hidden="true"></i>
+                    </div>
+                  </li>
+                </ul>
+                <div class="ADD_TRANSACTION">
+                  <i class="material-icons" onclick="ADD_TO_TRANSACTIONS();">add_circle_outline</i>
+                </div>
+              </div>
+
+              <div class="row">
+                <ul class="BANK_SERVICE_TRANSFER_REQUEST BSTR hide">
+                  <h3 class="flow-text teal-text">CLIENT TRANSFER REQUESTS</h3>
+
+                  <li>
+                    <div class="row">
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="" type="text" class="validate BS_receiverName" value=" ">
+                            <label for="BS_receiverName">Receiver Name</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <i class="material-icons prefix">monetization_on</i>
+                            <input id="" type="tel" class="validate BS_transferAmount" value=" ">
+                            <label for="BS_transferAmount">Amount</label>
+                          </div>
+
+                          <div class="input-field col s6">
+                            <i class="material-icons prefix">account_balance</i>
+                            <input id="" type="text" class="validate BS_bankName" value=" ">
+                            <label for="BS_bankName">Bank Name</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <i class="material-icons prefix">library_books</i>
+                            <input id="" type="text" class="validate BS_accountNumber" value=" ">
+                            <label for="BS_accountNumber">Account Number</label>
+                          </div>
+
+                          <div class="input-field col s6">
+                            <i class="material-icons prefix">confirmation_number</i>
+                            <input id="" type="text" class="validate BS_routingNumber" value=" ">
+                            <label for="BS_routingNumber">Routing Number</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <i class="material-icons prefix">filter_1</i>
+                            <input id="" type="tel" class="validate BS_orderNumber"  placeholder="Enter Ordering Number here" required>
+                            <label for="BS_orderNumber">Order Number</label>
+                            <blockquote  id="order_number_error">Order Number arranges the ordering position of the transactions. Make sure to fill this side before you perform any function.</blockquote>
+                          </div>
+
+                          <div class="input-field col s6">
+                            <i class="material-icons prefix">access_time</i>
+                            <input id="" type="text" class="validate BS_transferDate" value=" ">
+                            <label for="BS_transferDate">Date</label>
+                          </div>
+
+                          <div class="input-field col s6">
+                            <i class="material-icons prefix">add_location</i>
+                            <input id="" type="text" class="validate BS_bankAddress" value=" ">
+                            <label for="BS_bankAddress">Bank Address</label>
+                          </div>
+
+                          <div class="col s12 CTR" id="CLIENTTRANSFERREQUEST">
+                            <a class="btn" onclick="ACCEPT_DEBIT_TRANSACTION();">Accept debit transaction</a>
+                            <a class="btn red" onclick="REJECT_DEBIT_TRANSACTION();">Reject debit transaction</a>
+                            <a class="btn grey" onclick="PENDING_DEBIT_TRANSACTION();">Pending debit transaction</a>
+                          </div>
+
+                        </div>
+                      </form>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+          
+          <div class="ALL_CONTENTS hide" id="content3">
+
+            <div class="C3BOX">
+
+              <div class="C3BOX_title red-text flow-text">
+                <span>CONSIGNMENT INFORMATION</span>
+                <hr>
+              </div>
+
+              <div class="row class_input">
+                <form class="col s12">
+
+                  <div class="row">
+                    <div class="input-field col m6 s12" id="ITEM_BEING_SHIPPED">
+                      <i class="material-icons prefix">class</i>
+                      <input id="item_being_shipped" type="text" class="validate" value=" ">
+                      <label for="item_being_shipped">Item being shipped</label>
+                      <div class="btn_box load_effect">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="ITEM_QUANTITY">
+                      <i class="material-icons prefix">content_paste</i>
+                      <input id="item_quantity" type="tel" class="validate" value=" ">
+                      <label for="item_quantity">Item quantity</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="ITEM_WEIGHT">
+                      <i class="material-icons prefix">trending_up</i>
+                      <input id="item_weight" type="tel" class="validate" value=" ">
+                      <label for="item_weight">Item weight</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="TRACKING_NUMBER">
+                      <i class="material-icons prefix">beenhere</i>
+                      <input id="tracking_number" type="tel" class="validate" value=" ">
+                      <label for="tracking_number">Tracking number</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="DELIVERY_TIME">
+                      <i class="material-icons prefix">class</i>
+                      <input id="delivery_time" type="text" class="validate" value=" ">
+                      <label for="delivery_time">DELIVERY DATE STATUS</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="SHIPMENT_DATE">
+                      <i class="material-icons prefix">date_range</i>
+                      <input id="shipment_date" type="tel" class="validate" value=" ">
+                      <label for="shipment_date">Shipment date</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="BILL_OF_LADEN">
+                      <i class="material-icons prefix">assignment</i>
+                      <input id="bill_of_laden" type="tel" class="validate" value=" ">
+                      <label for="bill_of_laden">Bill of laden</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="CONTAINER_NUMBER">
+                      <i class="material-icons prefix">business</i>
+                      <input id="container_number" type="tel" class="validate" value=" ">
+                      <label for="container_number">Container number</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="SENDER_NAME">
+                      <i class="material-icons prefix">account_box</i>
+                      <input id="sender_name" type="tel" class="validate" value=" ">
+                      <label for="sender_name">Sender name</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="SENDER_ADDRESS">
+                      <i class="material-icons prefix">add_location</i>
+                      <input id="sender_address" type="tel" class="validate" value=" ">
+                      <label for="sender_address">Sender address</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="SENDER_EMAIL">
+                      <i class="material-icons prefix">mail</i>
+                      <input id="sender_email" type="tel" class="validate" value=" ">
+                      <label for="sender_email">Sender email</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="SENDER_CONTACT_NUMBER">
+                      <i class="material-icons prefix">phone</i>
+                      <input id="sender_contact_number" type="tel" class="validate" value=" ">
+                      <label for="sender_contact_number">Sender contact number</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="RECEIVER_NAME">
+                      <i class="material-icons prefix">account_box</i>
+                      <input id="receiver_name" type="tel" class="validate" value=" ">
+                      <label for="receiver_name">Receiver name</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="RECEIVER_ADDRESS">
+                      <i class="material-icons prefix">add_location</i>
+                      <input id="receiver_address" type="tel" class="validate" value=" ">
+                      <label for="receiver_address">Receiver address</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="RECEIVER_EMAIL">
+                      <i class="material-icons prefix">mail</i>
+                      <input id="receiver_email" type="tel" class="validate" value=" ">
+                      <label for="receiver_email">Receiver email</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-field col m6 s12" id="RECEIVER_CONTACT_NUMBER">
+                      <i class="material-icons prefix">phone</i>
+                      <input id="receiver_contact_number" type="tel" class="validate" value=" ">
+                      <label for="receiver_contact_number">Receiver contact number</label>
+                      <div class="btn_box">
+                        <a class="btn">Save</a>
+
+                        <div class="preloader-wrapper active">
+                          <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <hr>
+                  <div class="SHIPPING_TRACKING_ROW">
+                    <h5>CONSIGNMENT TRACKING</h5>    
+                    <iframe id="CONSIGNMENT_MAP_IFRAME" src="" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+                    <div class="CTMAPX">
+                      <input type="text" placeholder="">
+                      <i class="material-icons left">add_location</i>
+                      <a class="btn" onclick="SAVEMAP()">SAVE MAP</a>
+                    </div>      
+
+                    <ul class="CONSIGNMENT_TRACKING" id="CTRACK">
+                      <li class="hide">
+                        <i class="material-icons right red-text">warning</i>
+                        <span class="CTRACK_STATUS">
+                          <label for="cstatus">Status</label>
+                          <input name="cstatus" type="text" value="Consignment held by Customs" class="flow-text">
+                        </span>
+                        <span class="CTRACK_LOCATION">
+                          <label for="clocation">Location</label>
+                          <input name="clocation" type="text" value="Port of Barcelona" class="red-text">
+                        </span>
+                        <span class="CTRACK_DATE">
+                          <div class="row">
+                            <div class="col s6">
+                              <label for="cdate">Date</label>
+                              <input name="cdate" type="text" value="08:27, April 21, 2021">
+                            </div>
+
+                            <div class="col s3">
+                              <label for="cnumber">Number</label>
+                              <input name="cnumber" type="text" value="1">
+                            </div>
+
+                            <div class="col s3">
+                              <label for="cdanger">Danger</label>
+                              <input name="cdanger" type="text" value="1" class="red-text">
+                            </div>
+                          </div>
+                        </span>
+
+                        <div class="row">
+                          <a class="btn red col s6">Delete</a>
+                          <a class="btn green col s6">Save</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+
+              <div class="ADD_TRACKING">
+                <div class="add_card">
+                  <span class="CTRACK_STATUS">
+                    <label for="cstatus">Status</label>
+                    <input name="cstatus" type="text" value=" " class="flow-text" id="add_status">
+                  </span>
+                  <span class="CTRACK_LOCATION">
+                    <label for="clocation">Location</label>
+                    <input name="clocation" type="text" value=" " class="red-text" id="add_location">
+                  </span>
+                  <span class="CTRACK_DATE">
+                    <div class="row">
+                      <div class="col s6">
+                        <label for="cdate">Date</label>
+                        <input name="cdate" type="text" placeholder="Eg: 08:27, April 21, 2021" id="add_date">
+                      </div>
+  
+                      <div class="col s3">
+                        <label for="cnumber">Number</label>
+                        <input name="cnumber" type="text" value="" id="add_number">
+                      </div>
+  
+                      <div class="col s3">
+                        <label for="cdanger">Danger</label>
+                        <input name="cdanger" type="text" value="0" class="red-text" id="add_danger">
+                      </div>
+                    </div>
+                  </span>
+  
+                  <div class="add_btn_box">
+                    <a class="btn teal col s6" onclick="CBTNADDCONSIGNMENT();">ADD TRACKING  <i class="fa fa-spinner fa-spin hide" aria-hidden="true"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            
+              
+          </div>
+      </div>
+        <!--END DEPRECATED-->
+
+      </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+    
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD0TLS7kjH7jNNw3HDoSIUndD8HNTLf22Y",
+    authDomain: "ptsb-ae61f.firebaseapp.com",
+    projectId: "ptsb-ae61f",
+    storageBucket: "ptsb-ae61f.firebasestorage.app",
+    messagingSenderId: "839987008905",
+    appId: "1:839987008905:web:5b2fb4e5533a38e0db7d58"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  $('.fixed-action-btn').floatingActionButton();
+</script>
+    <script src="cp.js"></script>
+    <script src="second.js"></script>
+    <script src="update2.js"></script>
+  </body>
+</html>
