@@ -349,7 +349,7 @@ and (min-width: 0px) {
     color: green;
 }
 .pending-transaction{
-    color: grey;
+    color: #595959;
 }
 .tdets{
     padding: 0!important;
@@ -898,23 +898,27 @@ and (min-width: 0){
     margin: auto;
     display: block;
     border-radius: 6px;
-    padding: 14px;
+    padding: 29px;
     margin-top: 15px;
     max-width: 645px;
     padding-bottom: 296px;
+    border-radius: 29px;
 }
 #which_crypto i{
     display: inline-block;
     text-align: center;
     width: 23px!important;
-    position: relative;
+    position: absolute;
+    left: 24px;
+    top: 9px;
     font-size: 23px;
 }
 #which_crypto img{
     width: 23px;
     display: inline-block;
-    position: relative;
-    top: 4px;
+    position: absolute;
+    left: 24px;
+    top: 9px;
 }
 #which_crypto span{
     font-size: 20px;
@@ -922,6 +926,12 @@ and (min-width: 0){
     left: 3px;
     top: 2px;
     text-transform: uppercase;
+}
+@media screen and (max-width: 340px) 
+and (min-width: 0px){
+    #which_crypto span{
+        font-size: 17px;
+    }
 }
 #ltc-sign{
     top: 3px;
@@ -936,23 +946,45 @@ and (min-width: 0){
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 30px;
+    position: relative;
 }
 #litecoinWhich{
-    background-color: #e4e4e4;
 }
 #bitcoinWhich{
-    background-color: #F7931A;
+    background-color: #e4e4e4;
 }
+#bankaccountWhich{
+    background-color: #a6b6ff;
+}
+#bitcoinWhich i{
+    color: #F7931A;
+}
+
 #payout-bx{
     width: 98%;
     max-width: 645px;
     margin: auto;
     margin-top: 15px;
-    background-color: white;
+    background-color: #0000009e;
     border-radius: 6px;
     padding: 22px;
     padding-bottom: 50px;
     padding-top: 50px;
+    position:  relative;
+}
+#closePayout-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    color: #cecece;
+    margin: 13px;
+}
+#pyui1{
+    width: 97%;
+}
+.inp1{
+    width: 97%!important;
 }
 #payout-bx .form-group{
     margin-top: 37px;
@@ -967,7 +999,7 @@ and (min-width: 0){
     /* text-align: left; */
 }
 .idcspan{
-    width: 45%;
+    width: 40%;
     background-color: #cbc9c9;
     display: inline-block;
     /* height: 45px; */
@@ -987,6 +1019,7 @@ and (min-width: 0){
     position: absolute;
     right: 0;
     top: 0;
+    font-size: 10px;
     margin: 5%;
 }
 #idc input{
@@ -1005,6 +1038,7 @@ and (min-width: 0){
     font-size: 43px;
     position: relative;
     top: 17px;
+    color: grey;
 }
 
 
@@ -1017,6 +1051,8 @@ and (min-width: 0){
     border-radius: 30px;
     padding: 12px;
     margin-top: 30px;
+    margin: auto;
+    width: 57%;
 }
 #fundsbtcusd::-webkit-inner-spin-button,
 #fundsbtcusd::-webkit-outer-spin-button {
