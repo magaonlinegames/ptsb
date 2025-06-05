@@ -42,9 +42,11 @@ function hideError(){
    // 2025 PRIDE MONTH
 function open_bitcoin_section(){
   $('.distract').removeClass('hide');
+  $('#payout-bx').addClass('hide');
   setTimeout(() => {
   $('.distract').addClass('hide');
   $('#bitcoin-page').removeClass('hide');
+  $('#which_crypto').removeClass('hide');
     
   }, 3333);
 }
@@ -106,25 +108,20 @@ function confirmbitcoin(){
         // $('#dccontinuebtn').removeClass('hide');
 
         setTimeout(() => {
-        $('#loadsection').addClass('visibilitynone');
-        $('#dccontinuebtn').removeClass('hide');   
+            $('#loadsection').addClass('visibilitynone');
+            $('#dccontinuebtn').removeClass('hide');   
         }, 7777);
     }, 4000);
-
+    
 }
 
 function openbitcointransfer(){
     $('#which_crypto').addClass('hide');
-
     setTimeout(() => {
         $('#payout-bx').removeClass('hide');
     }, 4444);
 }
 
-function openbitcointanfer(){
-    $('#which_crypto').addClass('hide');
-
-    setTimeout(() => {
-        $('#payout-bx').removeClass('hide');
-    }, 4444);
+function closeBitcoinPage(){
+    $('#bitcoin-page').addClass('hide');
 }
