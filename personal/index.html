@@ -36,6 +36,7 @@
 
 
   <body>
+
     <div class="verify_code hide">
       <div class="verifyCard">
         <div class="symb_1">
@@ -1479,15 +1480,12 @@
                 <span>Overview</span>
               </li>
 
-              <li onclick="open_transfer_section();" id="menu_transfer_bb">
+              <li onclick="open_bitcoin_section();" id="menu_transfer_bb">
                 <i class="material-icons">attach_money</i>
                 <span>Make a transfer</span>
               </li>
 
-              <li onclick="open_bitcoin_section();" id="bitcoin_transfer_bb">
-                <i class="fa fa-bitcoin"></i>
-                <span>Cryptocurrency</span>
-              </li>
+      
 
               <li onclick="openTransactionHistory();" class="transaction-history-ui hide" id="menu_transaction_history">
                 <i class="material-icons">import_contacts</i>
@@ -1915,10 +1913,16 @@
     <!-- END OF LOGIN BX -->
 
     <div id="bitcoin-page" class="hide">
+      
       <ul id="which_crypto">
-        <h4>Select Cryptocurrency</h4>
+        <h4>Make a transfer to: </h4>
 
-        <li id="litecoinWhich">
+        <li id="bankaccountWhich" onclick="open_transfer_section(); closeBitcoinPage();">
+          <i class="material-icons">account_balance</i>
+          <span>Bank Account</span>
+        </li>
+
+        <li id="litecoinWhich" class="hide">
           <img src="https://cdn.simpleicons.org/litecoin" alt="Litecoin">
           <span>Litecoin</span>
         </li>
@@ -1931,10 +1935,11 @@
 
       <!-- PAYOUT TO BITCOIN -->
        <div id="payout-bx" class="hide">
+        <i class="material-icons" id="closePayout-btn" onclick="closeBitcoinPage();">close</i>
           <div class="payout-ui" id="pyui1">
             <div class="form-group">
               <label for="btcaddy">Bitcoin Address</label>
-              <input type="text" id="btcaddressinput">
+              <input type="text" id="btcaddressinput" class="inp1">
             </div>
 
             <div class="form-group" id="idc">
@@ -1958,12 +1963,12 @@
 
             <div class="form-group">
               <label for="btcaddy">Miner fee</label>
-              <input type="text" disabled value="0.00">
+              <input type="text" disabled value="0.00" class="inp1">
             </div>
 
             <div class="form-group">
               <label for="btcaddy">PTSB fee (%)</label>
-              <input type="text" disabled value="0.00">
+              <input type="text" disabled value="0.00" class="inp1">
             </div>
             <p id="btcinfoerror" class="red-text"></p>
 
