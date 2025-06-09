@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>Registration | PERSONAL BANKING, CORPORATE BANKING, ONLINE BANKING</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+
+
+    <!-- GOOGLE SERVICES -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+          
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage.js"></script> -->
+
+    
+
+  </head><!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/11.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore-compat.js"></script>
+
+  <body>
+
+        <div id="registration-page" class="rp">
+            <div id="loaderpage" class="hide">
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+            <div id="registration-bx" class="rbx">
+                <div id="rpheader">
+                    <span id="rplogoicon">
+                        <a href="../">
+                            <img src="../img/logo/mainlogo.png" alt="">
+
+                        </a>
+                    </span>
+                    <span id="rploginbtn" href="../personal/" >
+                        <a href="../personal/">Log in</a>
+                    </span>
+                </div>
+                <!-- end of header -->
+                <div id="rpnavisymbol">
+                    <span class="rpsymbol123" id="rpsymb1">
+                        <i class="material-icons">account_circle </i>
+                        <label> Basic info</label>
+                    </span>
+                    <span class="rpsymbol123" id="rpsymb2">
+                        <i class="material-icons">portrait</i>
+                        <label> Verification</label>
+                    </span>
+                    <span class="rpsymbol123" id="rpsymb3">
+                        <i class="material-icons">verified_user</i>
+                        <label> You're in!</label>
+                    </span>
+
+                    <span class="rplines" id="rpline1"></span>
+                    <span class="rplines" id="rpline2"></span>
+                </div>
+                <!-- end of navigation -->
+
+                <div id="form1" class="rpf">
+                    <h4>Let's get started</h4>
+                    <p>Let's start with some basic information</p>
+
+                    <div class="fg">
+                        <input type="text" class="fginp fginput" id="registerfirstnameinput" placeholder="First name" >
+                        <input type="text" class="fginp fginput" id="registerlastnameinput" placeholder="Last name" >
+                    </div>
+
+                    <div class="fg">
+                        <input type="text" class="fginp"  id="registeremailinput" placeholder="Email">
+                    </div>
+
+                    <a class="rpformtbn" id="rpformbtn-1" onclick="register(1)">Next</a>
+                </div>
+
+                <div id="form2" class="rpf hide">
+                    <h4>Your date of birth</h4>
+                    <p>You must be 18 years or older to join Pioneer</p>
+
+                    <div class="fg">
+                        <input type="text" class="fginp"  id="registerDOBinput" placeholder="Date of birth">
+                    </div>
+
+                    <a class="rpformtbn" id="rpformbtn-2" onclick="register(2)">Next</a>
+                </div>
+
+                <div id="form3" class="rpf hide">
+                    <h4>Your mobile phone</h4>
+                    <p>
+                        Your number is used to protect your account and keep in touch
+                    </p>
+
+                    <div class="fg">
+                        <input type="text" class="fginp"  id="registerphonenumberinput" placeholder="Mobile phone number">
+                    </div>
+
+                    <a class="rpformtbn" id="rpformbtn-3" onclick="register(3)">Next</a>
+                </div>
+
+                <div id="form4" class="rpf hide">
+                    <h4>Your home address</h4>
+                    <p>
+                        We'll need to verify your home address. This is also where we'll send your new card.
+                    </p>
+
+                    <div class="fg">
+                        <input type="text" class="fginp"  id="registerstreetaddressinput" 
+                        placeholder="Street address (no P.O. boxes)">
+
+                        <input type="text" class="fginp"  id="registeraptsuiteinput" 
+                        placeholder="Apt / Suite number (optional)">
+
+                        <input type="text" class="fginp"  id="registerzipcodeinput" 
+                        placeholder="ZIP Code">
+                    </div>
+
+                    <div class="fg">
+                        <input type="text" class="fginp2"   id="registercityinput" 
+                        placeholder="City">
+
+                        <input type="text" class="fginp2"  id="registerstateinput" 
+                        placeholder="State">
+                    </div>
+
+                    <a class="rpformtbn" id="rpformbtn-4" onclick="register(4)">Next</a>
+                </div>
+
+                <div id="form5" class="rpf hide">
+                    <h4>A few more details</h4>
+                    <p>
+                        Tell us a few more things so we have the right info. This 
+                        won't affect your application.
+                    </p>
+
+                    <div class="fg">
+                        <input type="text" class="fginp"  id="registerincomesourceinput" 
+                        placeholder="What's your income source?">
+
+                        <input type="text" class="fginp"  id="registerworkinput" 
+                        placeholder="What do you do for work?">
+
+                        <input type="text" class="fginp"  id="registerincomeinput" 
+                        placeholder="What's your annual income?">
+                    
+
+                        <input type="text" class="fginp"   id="registeraboutusinput" 
+                        placeholder="How did you hear about us?">
+                    </div>
+
+                    <a class="rpformtbn" id="rpformbtn-5" onclick="register(5);">Next</a>
+                </div>
+
+                <div id="form6" class="rpf hide">
+                    <h4>Create password</h4>
+                    <p>
+                        Strong passwords keep your account safer.
+                    </p>
+
+                    <div class="fg">
+                        <input type="password" class="fginp"  id="registerpasswordinput" 
+                        placeholder="Password">
+                    </div>
+
+                    <a class="rpformtbn" id="rpformbtn-6" onclick="register(6);">Next</a>
+                </div>
+
+                <div id="form7" class="rpf hide">
+                    <h4>Verify your identity</h4>
+                    <p>
+                        We just need to confirm you're really you. This won't affect 
+                        your credit score.
+                    </p>
+
+                    <div class="fg">
+                        <input type="text" class="fginp"  id="registerssninput" 
+                        placeholder="Enter your SSN">
+                         <input type="text" class="fginp"  id="registerssnconfirminput" 
+                        placeholder="Confirm your SSN">
+                        
+                        <div id="terms">
+                            <span class="tms" id="tms1">Your info is secured with industry standard encryption.</span>
+
+
+                            <div class="terms-bx">
+                                <span class="tms-col" id="tms-checkbox">
+                                    <label>
+                                        <input type="checkbox" />
+                                        <i class="material-icons"></i>
+                                        <span></span>
+                                    </label>
+                                </span>
+                                <span class="tms-col" id="tms-readme">
+                                    <b>Authorization for this information to disclose your data</b>
+                                    (optional)
+
+                                    <p>
+                                        I authorize the Administration to verify and disclose to Pioneer Trust And Savings Bank P.L.C.,
+                                        their service provider for the purpose of this verification, whether the name, Number (SSN) and 
+                                        date of birth I have submitted matches information in the SSA records. My consent is for a one 
+                                        time validation within the next 90 days.
+                                    </p>
+
+                                    <p>
+                                        By clicking the checkbox above, I agree and consent for the SSA to disclose my SSN Verification. 
+                                        I agree that my electronic signature has the same legal meaning, validity, and effect as my 
+                                        handwritten signature.
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="rpformtbn" id="rpformbtn-7" onclick="register(7);">Next</a>
+                </div>
+
+                <div id="form" class="rpf hide">
+                    <h4>Government-Issued ID:</h4>
+                    <p>
+                        Please provide us with a clear, front-facing, unexpired photo ID 
+                    </p>
+
+                    <ul>
+                        <li>
+                            <!-- <input type="file" id="fileInput" name="imageUpload" accept="image/*"> -->
+                            <input type="file" id="fileInput">
+                            <button onclick="uploadFile()">Upload</button>
+                        </li>
+                    </ul>
+
+                  
+
+                    <a class="rpformtbn" id="rpformbtn-7">Next</a>
+                </div>
+
+                <div id="complete" class="hide">
+                    <span id="log">
+                        <img src="suc.png" alt="">
+                    </span>
+
+                    <span>Dear Customer</span>,
+                    <p>
+                        Thank you for choosing us and registering to open an account 
+                        with us online. We’re delighted to welcome you and are committed to 
+                        making your banking experience seamless and exceptional.
+                    </p>
+                    <p>
+                        We are currently reviewing the information you provided to ensure 
+                        everything is in order. Once this process is complete, a dedicated 
+                        account manager will be assigned to you to guide you through the next 
+                        steps in activating your account. You will receive an email with 
+                        further details and instructions to proceed as soon as your account 
+                        setup is finalized.
+                    </p>
+                    <p>
+                        We appreciate your trust in us and look forward to serving 
+                        your financial needs. If you have any questions in the meantime, 
+                        please don’t hesitate to contact our team.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="../personal/dbbb.js"></script>
+            <script src="register.js"></script>
+    
+  </body>
+</html>
+

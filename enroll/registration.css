@@ -1,0 +1,269 @@
+#registration-page{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 555;
+    left: 0;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+#registration-bx{
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* height: 400px; */
+    width: 100;
+    max-width: 777px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#rpheader{
+    position: relative;
+}
+#rplogoicon{
+    display: block;
+    display: inline-block;
+}
+#rploginbtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#rpnavisymbol{
+    position: relative;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    height: 93px;
+    max-width: 666px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.rpsymbol123{
+    background-color: rgb(138, 250, 147);
+    padding: 6px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    text-align: center;
+    border-radius: 30px;
+    z-index: 555;
+}
+.rpsymbol123 i{
+    position: relative;
+    top: 7px;
+    color: rgb(0, 122, 0);
+}
+.rpsymbol123 label{
+    position: relative;
+    top: 12px;
+    width: 54px;
+    /* background-color: red; */
+    display: block;
+    left: -9px;
+}
+#rpsymb3{
+    right: 0;
+}
+
+#rpsymb2{
+    left: 49%;
+    margin: auto;
+}
+
+#rpsymb3 label{
+
+}
+
+.rplines{
+    position: absolute;
+    top: 25px;
+    height: 3px;
+    width: 49%;
+    background-color: rgb(138, 250, 147);
+}
+#rpline2{
+    right: 0;
+    /* background-color: green; */
+    z-index: 333;
+}
+.rpf{
+    max-width: 666px;
+    margin: auto;
+    /* border: 1px solid red; */
+    overflow: auto;
+}
+
+.fginp{
+    border: 1px solid grey!important;
+    border-radius: 30px!important;
+    padding: 14px!important;
+    width: 92% !important;
+}
+#registeremailinput{
+    margin: 6px;
+}
+.fginput{
+    /* display: block; */
+    width: 37%!important;
+    float: left;
+    margin-left: 5px!important;
+}
+@media screen and (min-width: 392px) 
+and (max-width: 9999999990px){
+    .fginput{
+        width: 40%!important;
+    }
+    #registerlastnameinput{
+        position: relative;
+        right: -10px;
+    }
+    #registeremailinput{
+        width: 88%!important;
+    }
+}
+
+@media screen and (min-width: 425px) 
+and (max-width: 9999999990px){
+    .fginput{
+        width: 40%!important;
+    }
+   
+    #registeremailinput{
+        width: 90%!important;
+    }
+
+    .rpformtbn{
+        width: 100%;
+    }
+}
+
+.rpformtbn{
+    background: #a1ffa187;
+    color: black;
+    display: block;
+    padding: 9px;
+    width: 96%;
+    margin-top: 12px;
+    text-align: center;
+    border-radius: 30px;
+    padding: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fg{
+    overflow: auto;
+}
+.fginp2{
+    padding: 14px!important;
+    float: left;
+    width: 55%!important;
+    border-radius: 30px!important;
+    border: 1px solid grey!important;
+}
+#registerstateinput{
+    width: 32%!important;
+    margin-left: 5px;
+}
+
+#terms{
+    /* border: 2px solid blue; */
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.tms{
+    display: block;
+}
+
+.terms-bx{
+    /* background-color: yellow; */
+    padding-bottom: 12px;
+    overflow: auto;
+    height: 250px;
+}
+.tms-col{
+    display:block;
+}
+#tms-checkbox{
+    /* background-color: red; */
+
+    display: block;
+    padding: 3px;
+    height: 50px;
+    width: 65px;
+    position: absolute;
+}
+#tms-readme{
+    width: 90%;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0;
+}
+#tms-readme p{
+    font-weight: 600;
+    width: 97%;
+}
+#tms-checkbox input{
+    position: relative;
+    right: -20px;
+    top: 9px;
+}
+
+
+#loaderpage{
+    position: absolute;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    z-index: 666;
+    left: 0;
+    right: 0;
+    padding: 25%;
+    text-align: center;
+}
+
+#form8 ul li{
+    text-align: center;
+}
+
+
+#complete{
+    max-width: 666px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+#log{
+    display: block;
+    width: 150px;
+    margin: auto;
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+#log img{
+    display: block;
+    width: 75%;
+    border-radius: 69px;
+    margin: auto;
+}
+
+.symbolactive{
+    background-color: green;
+    color: black;
+}
+.symbolactive i{
+    color: white!important;
+}
+.symbolactive label{
+    color: rgb(0, 0, 0)!important;
+    font-weight: bold;
+}
