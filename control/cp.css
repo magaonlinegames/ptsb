@@ -1,3 +1,69 @@
+/* JUNE 2025 */
+.register-form{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 777;
+}
+.rwcol{
+    text-align: center;
+    position: relative;
+    margin: auto;
+    width: 90%;
+}
+#rgi1 label{
+    position: relative;
+}
+#rgi1 h4{
+    text-align: center;
+}
+#closeregbtn{
+    width: 45%;
+    display: block;
+    margin: auto;
+    padding: 6px;
+    margin-top: 16px;
+    text-align: center;
+    padding: 14px;
+
+}
+.rwcol a{
+    width: 45%;
+    padding: 14px;
+    float: left;
+    text-align: center;
+    
+}
+
+
+#setaccountid{
+    border-radius: 17px;
+    width: 355px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+#si1{
+    display: block;
+    margin: auto;
+    width: 30px;
+    font-size: 30px;
+}
+#account_ref_id{
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+#ref-btn{
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
 /* NOVEMBER 14 2021*/
 .ECOMMERCE{
     background: white;
