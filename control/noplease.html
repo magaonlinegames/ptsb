@@ -18,7 +18,11 @@
 
   <body>
 
+    
+
     <div class="CONTROL_BX hide">
+
+     
       <div class="CBX2 CBX2_1">
         <div class="logo_bx_updt">
             <img src="alien.png" >
@@ -332,10 +336,119 @@
 
 
     <div class="GOD">
+       <!-- REGISTER CONTROL -->
+       <div class="register-form hide">
 
-      <div class="ECOMMERCE">
+        <div id="setaccountid" class="hide">
+          <i class="material-icons" id="si1">assignment_late</i>
 
-      </div>
+          <div class="formgroup">
+            <p>Enter Account Reference ID: (e.g: account1, acccount2, account3, etc)</p>
+            <input type="text" id="account_ref_id" >
+            <p class="error-txt red-text"></p>
+            <a class="btn green" id="ref-btn" onclick="ACCEPTMEMBER();">Continue</a>
+          </div>
+
+        </div>
+
+        <div id="rgi1">
+          <h4></h4>
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">fingerprint</i>
+              <input type="text" id="identific" class="autocomplete" disabled>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">local_library</i>
+              <input type="text" id="namereg" class="autocomplete">
+              <label for="namereg">First name</label>
+            </div>
+
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">local_library</i>
+              <input type="text" id="lastnamereg" class="autocomplete">
+              <label for="lastnamereg">Last name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">email</i>
+              <input type="text" id="emailreg" class="autocomplete">
+              <label for="emailreg">Email</label>
+            </div>
+
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">child_friendly</i>
+              <input type="text" id="dobreg" class="autocomplete">
+              <label for="dobreg">DOB</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">hearing</i>
+              <input type="text" id="hearusreg" class="autocomplete">
+              <label for="hearusreg">How did you hear about this bank?</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">add_location</i>
+              <input type="text" id="addressreg" class="autocomplete">
+              <label for="addressreg">Address</label>
+            </div>
+
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">add_location</i>
+              <input type="text" id="suitereg" class="autocomplete">
+              <label for="suitereg">Suite/Apartnment/Unit Number</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">location_city</i>
+              <input type="text" id="workreg" class="autocomplete">
+              <label for="workreg">What work do you do?</label>
+            </div>
+
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">monetization_on</i>
+              <input type="text" id="sourceincomereg" class="autocomplete">
+              <label for="sourceincomereg">What's your source of income</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">attach_money</i>
+              <input type="text" id="incomerangereg" class="autocomplete">
+              <label for="incomerangereg">Income range?</label>
+            </div>
+
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">phone</i>
+              <input type="text" id="phonenumberreg" class="autocomplete">
+              <label for="phonenumberreg">Phone number</label>
+            </div>
+          </div>
+
+          <div class="row rwcol">
+            <a class="regbtns blue" onclick="acceptUser();">Accept User</a>
+            <a class="regbtns red right" onclick="DENYMEMBER();">Deny User</a>
+          </div>
+          <div class="row">
+            <a class="grey" id="closeregbtn">Close Register</a>
+          </div>
+        </div>
+
+       </div>
+
+     
       
       <div class="user-experience hide" id="ui1">
         <div class="card">
