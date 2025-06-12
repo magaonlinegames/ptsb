@@ -165,6 +165,7 @@ function registeruser(fn,ln,em,dob,addy,sute,zpcde,cty,ste,pscde,mbphne,
         ffwork:  wrk,
         ffincome:  incme,
         ffaboutus:  aboutus,
+        status: 0,
         ffsecuritynumber:  securitynumber
     })
     .then((docRef) => {
