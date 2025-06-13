@@ -270,7 +270,8 @@ function acceptUser(){
 }
 
 function ACCEPTMEMBER(){
-    var ref = $('#account_ref_id').val().trim();
+    var ref = 'account' + $('#account_ref_id').val().trim();
+    // alert(ref);
     var name,email;
     name = $('#namereg').val()+ " "+$('#lastnamereg').val();
     email = $('#emailreg').val();
@@ -330,13 +331,13 @@ function updatestatusofregistrant(){
     .then(() => {
         console.log("Document successfully updated!");
         $('#account_ref_id').val('');
-        $('#register-form').addClass('hide');
+        $('.register-form').addClass('hide');
     })
     .catch((error) => {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
         alert('Failed');
-        $('#register-form').addClass('hide');
+        $('.register-form').addClass('hide');
 
     });
 }
