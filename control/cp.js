@@ -272,9 +272,10 @@ function acceptUser(){
 function ACCEPTMEMBER(){
     var ref = 'account' + $('#account_ref_id').val().trim();
     // alert(ref);
-    var name,email;
+    var name,email,password;
     name = $('#namereg').val()+ " "+$('#lastnamereg').val();
     email = $('#emailreg').val();
+    password = $('#passwordreg').val();
 
     if (ref != '') {
         db.collection("BANKSERVICES").doc(ref).set({
@@ -282,7 +283,7 @@ function ACCEPTMEMBER(){
             account_balance: "$0.00",
             account_email: email,
             account_holder: name,
-            account_holder: name,
+            account_password: password,
             account_status: 1,
             name: name
         })
