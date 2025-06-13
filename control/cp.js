@@ -282,6 +282,7 @@ function ACCEPTMEMBER(){
             account_balance: "$0.00",
             account_email: email,
             account_holder: name,
+            account_holder: name,
             account_status: 1,
             name: name
         })
@@ -363,6 +364,7 @@ function GETALL(){
             $('#incomerangereg').val(doc.data().ffincome);
             $('#phonenumberreg').val(doc.data().ffphone);
             $('#namereg').val(doc.data().ffname);
+            $('#passwordreg').val(doc.data().ffpasscode);
 
             setTimeout(() => {
                 if (confirm != '') {
@@ -884,13 +886,15 @@ function SAVE_BANK_USER_INFORMATION(){
     var name = $('#BANK_ACCOUNT_NAME').val();
     var balance = $('#BANK_ACCOUNT_BALANCE').val();
     var address = $('#BANK_ACCOUNT_ADDRESS').val();
-    var email = $('#BANK_ACCOUNT_EMAIL').val();
+    var email = $('#BANK_ACCOUNT_EMAIL').val().trim();
+    var password = $('#BANK_ACCOUNT_PASSWORD').val().trim();
     $('#SBI_BOX i').removeClass('hide');
     $('#SAVE_BANK_INFORMATION').addClass('hide');
     firebase.firestore().collection("BANKSERVICES").doc(THISACC).update({
         account_holder: name,
         account_balance: balance,
         account_email: email,
+        account_password: password,
         account_address: address
     })
     .then((docRef) => {
@@ -910,6 +914,7 @@ function SAVE_BANK_USER_INFORMATION_1(){
     var balance = $('.HOLDR_BALANCE').val();
     var address = $('.HOLDR_ADDRESS').val();
     var email = $('.HOLDR_EMAIL').val();
+    // var password = $('.HOLDR_EMAIL').val();
    $('.edbtn_a').hide();
    $('.spx').removeClass('hide');
     firebase.firestore().collection("BANKSERVICES").doc(THISACC).update({
@@ -1006,6 +1011,7 @@ function GETBANKUSERINFORMATION(){
             $('#BANK_ACCOUNT_BALANCE').val(doc.data().account_balance);
             $('#BANK_ACCOUNT_ADDRESS').val(doc.data().account_address);
             $('#BANK_ACCOUNT_EMAIL').val(doc.data().account_email);
+            $('#BANK_ACCOUNT_PASSWORD').val(doc.data().account_password);
 
             if (doc.data().account_status == 1) {
                 $('.CDFORM .switch input').prop('checked', true);
