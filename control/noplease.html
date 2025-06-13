@@ -337,7 +337,7 @@
 
     <div class="GOD">
        <!-- REGISTER CONTROL -->
-       <div class="register-form hide">
+       <div class="register-form hide" id="register-form">
 
         <div id="setaccountid" class="hide">
           <i class="material-icons" id="si1">assignment_late</i>
@@ -434,6 +434,13 @@
               <i class="material-icons prefix">phone</i>
               <input type="text" id="phonenumberreg" class="autocomplete">
               <label for="phonenumberreg">Phone number</label>
+            </div>
+          </div>
+          <div class="row">
+             <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">lock</i>
+              <input type="text" id="passwordreg" class="">
+              <label for="passwordreg">Password: </label>
             </div>
           </div>
 
@@ -1139,14 +1146,19 @@
                     </div>
 
                     <div class="input-field col s6">
-                      <i class="material-icons prefix">add_location</i>
-                      <input id="BANK_ACCOUNT_ADDRESS" type="tel" class="validate" value=" ">
-                      <label for="BANK_ACCOUNT_ADDRESS">Address</label>
+                      <i class="material-icons prefix">lock</i>
+                      <input id="BANK_ACCOUNT_PASSWORD" type="text" class="validate" value=" ">
+                      <label for="BANK_ACCOUNT_PASSWORD">Password</label>
                     </div>
                     <div class="input-field col s6">
                       <i class="material-icons prefix">add_location</i>
                       <input id="BANK_ACCOUNT_EMAIL" type="tel" class="validate" value=" ">
                       <label for="BANK_ACCOUNT_EMAIL">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">add_location</i>
+                      <input id="BANK_ACCOUNT_ADDRESS" type="text" class="validate" value=" ">
+                      <label for="BANK_ACCOUNT_ADDRESS">Address</label>
                     </div>
                   </div>
                   <div class="row align_center SBI_BOX">
