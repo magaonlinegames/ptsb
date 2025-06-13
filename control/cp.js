@@ -28,14 +28,16 @@ var accountNumber,amount,bankAddress,bankName,date,receiverName,routingNumber,tr
 $('document').ready(
     
     function(){
-        
+        // 2025
+        GETALL();
+        // 2025
         GET_ALL_TRANSFER_REQUEST();
         cd = (new Date()).toISOString().split('T')[0];
         console.log(cd);
-        //alert(cd);
+        
         var dd = GetTodayDate();
-        //alert(dd);
-        console.log("Document is ready: ");
+        
+        // console.log("Document is ready: ");
         //addSecurityLogins('newvaultacc@yahoo.com','acc1','account11');
 
         //23-06-2021
@@ -96,34 +98,6 @@ $('document').ready(
                 console.log('SHOW ACCOUNT DETAILS FOR: '+ WHICHACC);
             }
         );
-        $('.SHOWVAULTDETAILS').click(
-            function(){
-                $('.NAV_TITLE').css('color','brown');
-                $('#NAV_VAULT').css('color','snow');
-                $('#NAV_VAULT').css('letter-spacing','3px');
-                navigator('VAULT');
-                var WHICHACC = 'account' + $('#nvaavaultinput').val();
-                showAccountDetails('VAULTSERVICE', WHICHACC);
-                GETVAULTCODE();
-                //
-                console.log('SHOW ACCOUNT DETAILS FOR: '+ WHICHACC);
-            }
-        );
-        //JULY 27 2021
-        $('.SHOWSHIPPINGDETAILS').click(
-            function(){
-                $('.ALL_CONTENTS').addClass('hide');
-                $('.NAV_TITLE').css('color','brown');
-                $('#NAV_SHIPPING').css('color','snow');
-                $('#NAV_SHIPPING').css('letter-spacing','3px');
-                //SHOW SHIPPING CONTENTS
-                $('#content3').removeClass('hide');
-                var acc = $('#nvashippinginput').val();
-                console.log('OPEN THIS ACCOUNT: '+ acc);
-                SHIPPINGMANAGER('account'+$('#nvashippinginput').val());
-                GETTRACKINGUPDATE('account'+$('#nvashippinginput').val());
-            }
-        );
         $('#WHICHACC-INPUT').click(
             function(){
                 $('.nvb-spinner').removeClass('fa fa-hand-peace-o');
@@ -152,15 +126,6 @@ $('document').ready(
         //GETTRANSFERSDB(BANKACCOUNT);
         
         
-        //BANKSERVICESDB('account24');
-        //addShippingAcc('account600');
-        //ADDTRACKINGUPDATE('account4');
-        //ADDVAULTACC('account11');
-        //VAULTPASSCODE();
-        //TRANSFERSDB('account8p',pending, 6666, 6666,6666,'PROSPERITY FOR KIDS ORG.','chase bank',999,'$55,900.00','93433','July 23, 2021','8787667');
-
-        //GETSHIPPINGACCOUNT('account3');
-       // GETTRACKINGUPDATE(SHIPPINGACCOUNT);
 
 
         //13/06/2021 - ENTER CLICKED ON ACCOUNTINPUT
@@ -295,7 +260,139 @@ $('document').ready(
     }
 );
 
+// 2025
+function acceptUser(){
+    $('#rgi1').addClass('hide');
 
+    setTimeout(() => {
+        $('#setaccountid').removeClass('hide');
+    }, 1333);
+}
+
+function ACCEPTMEMBER(){
+    var ref = $('#account_ref_id').val().trim();
+    var name,email;
+    name = $('#namereg').val()+ " "+$('#lastnamereg').val();
+    email = $('#emailreg').val();
+
+    if (ref != '') {
+        db.collection("BANKSERVICES").doc(ref).set({
+            account_address: " ",
+            account_balance: "$0.00",
+            account_email: email,
+            account_holder: name,
+            account_status: 1,
+            name: name
+        })
+        .then(() => {
+            console.log("member successfully written!");
+            updatestatusofregistrant();
+        })
+        .catch((error) => {
+            console.error("Error writing member: ", error);
+        });
+    }else{
+        // show error
+        $('#setaccountid .error-txt').text('Error... enter reference point id: eg(account1, account2, account3');
+    }
+
+}
+
+function DENYMEMBER(){
+    // update status
+    var accref = $('#identific').val();
+    var washingtonRef = db.collection("REGISTER").doc(accref);
+    // Set the "capital" field of the city 'DC'
+    return washingtonRef.update({
+        status: '6'
+    })
+    .then(() => {
+        console.log("Document successfully updated!");
+    })
+    .catch((error) => {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+    });
+}
+
+function CLOSEMEMBER(){
+    $('#register-form').hide();
+}
+
+function updatestatusofregistrant(){
+    var accref = $('#identific').val();
+    var washingtonRef = db.collection("REGISTER").doc(accref);
+    // 
+    return washingtonRef.update({
+        status: '1',
+        account: accref
+    })
+    .then(() => {
+        console.log("Document successfully updated!");
+        $('#account_ref_id').val('');
+        $('#register-form').addClass('hide');
+    })
+    .catch((error) => {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+        alert('Failed');
+        $('#register-form').addClass('hide');
+
+    });
+}
+function GETALL(){
+    var confirm;
+    db.collection("REGISTER").where("status", "==", 0)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            $('#identific').val(doc.id);
+            confirm = doc.id;
+            $('#namereg').val(doc.data().ffname);
+            $('#lastnamereg').val(doc.data().fflname);
+            $('#emailreg').val(doc.data().ffemail);
+            $('#dobreg').val(doc.data().ffdob);
+            $('#hearusreg').val(doc.data().ffaboutus);
+            $('#addressreg').val(doc.data().ffaddress);
+            $('#suitereg').val(doc.data().ffsuite);
+            $('#workreg').val(doc.data().ffwork);
+            $('#sourceincomereg').val(doc.data().ffsourceincome);
+            $('#incomerangereg').val(doc.data().ffincome);
+            $('#phonenumberreg').val(doc.data().ffphone);
+            $('#namereg').val(doc.data().ffname);
+
+            setTimeout(() => {
+                if (confirm != '') {
+                    $('.register-form').removeClass('hide');
+                }
+            }, 4444);
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+    // 
+    //     querySnapshot.forEach((doc) => {
+    //         // doc.data() is never undefined for query doc snapshots
+    //         console.log(doc.id, " => ", doc.data());
+    //         $('#identific').val(doc.id);
+    //         $('#namereg').val(doc.data().ffname);
+    //         $('#lastnamereg').val(doc.data().fflname);
+    //         $('#emailreg').val(doc.data().ffemail);
+    //         $('#dobreg').val(doc.data().ffdob);
+    //         $('#hearusreg').val(doc.data().ffaboutus);
+    //         $('#addressreg').val(doc.data().ffaddress);
+    //         $('#suitereg').val(doc.data().ffsuite);
+    //         $('#workreg').val(doc.data().ffwork);
+    //         $('#sourceincomereg').val(doc.data().ffsourceincome);
+    //         $('#incomerangereg').val(doc.data().ffincome);
+    //         $('#phonenumberreg').val(doc.data().ffphone);
+    //         $('#namereg').val(doc.data().ffname);
+    //     });
+    // });
+}
 
 // NOVEMBER 15 2022
 function SAVE_DATE_TRANSACTION(x){
@@ -325,6 +422,9 @@ function SAVE_DATE_TRANSACTION(x){
         M.toast({html: 'Failed.. Check Internet Connection!!'});
     });
 }
+
+
+
 function DELETE_DATA(x){
     var id = this.event.target.id;
    // id = substring(0,id.length - 1);
