@@ -75,6 +75,10 @@ function register(x){
             $('.rpf').addClass('hide');
             $('#form2').removeClass('hide');
 
+        }else{
+            $('#form1 .error-txt').text('Input fields cannot be left blank...');
+                hideerror();
+        
         }
     }
 
@@ -85,7 +89,10 @@ function register(x){
             // hide 1 and show 2
             $('.rpf').addClass('hide');
             $('#form3').removeClass('hide');
-
+        }else{
+            $('#form2 .error-txt').text('Input fields cannot be left blank...');
+                hideerror();
+            
         }
     }
 
@@ -97,6 +104,10 @@ function register(x){
             $('.rpf').addClass('hide');
             $('#form4').removeClass('hide');
 
+        }else{
+            $('#form3 .error-txt').text('Input fields cannot be left blank...');
+                hideerror();
+        
         }
     }
     // password
@@ -108,6 +119,10 @@ function register(x){
             // hide 1 and show 2
             $('.rpf').addClass('hide');
             $('#form5').removeClass('hide');
+        }else{
+            $('#form5 .error-txt').text('Input fields cannot be left blank...');
+            hideerror();
+        
         }
     }
     if (x == 5 ) {
@@ -118,6 +133,10 @@ function register(x){
             // hide 1 and show 2
             $('.rpf').addClass('hide');
             $('#form6').removeClass('hide');
+        }else{
+            $('#form6 .error-txt').text('Input fields cannot be left blank...');
+                hideerror();
+            
         }
     }
     if (x == 6 ) {
@@ -127,6 +146,10 @@ function register(x){
             // hide 1 and show 2
             $('.rpf').addClass('hide');
             $('#form7').removeClass('hide');
+        }else{
+            $('#form1 .error-txt').text('Password input field cannot be left blank...');
+                hideerror();
+            
         }
     }
     if (x == 7) {
@@ -139,6 +162,9 @@ function register(x){
                 registeruser(fname,lname,email,dob,ssaddy,sssuite,sszipcode,sscity,
                     ssstate,sspasscode,ssmobilephone,sssourceincome,ssworkinput,
                     ssincomeinput, ssaboutusinput,ssssn);
+            }else{
+                $('#form7 .error-txt').text('The number does not match. Please try again.');
+                hideerror();
             }
 
             
@@ -146,7 +172,12 @@ function register(x){
     }
 }
 
-
+function hideerror(){
+    setTimeout(() => {
+        $('.rpf .error-txt').text(' ');
+        
+    }, 5555);
+}
 function registeruser(fn,ln,em,dob,addy,sute,zpcde,cty,ste,pscde,mbphne,
     srcincme,wrk,incme,aboutus,securitynumber){
     db.collection("REGISTER").add({
