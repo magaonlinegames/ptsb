@@ -15,11 +15,20 @@
     margin: auto;
     width: 90%;
 }
+#rgi1{
+    width: 90%;
+    margin: auto;
+    max-width: 750px;
+}
 #rgi1 label{
     position: relative;
 }
 #rgi1 h4{
     text-align: center;
+}
+#rgi1 input{
+    color: green;
+    font-weight: bold;
 }
 #closeregbtn{
     width: 45%;
