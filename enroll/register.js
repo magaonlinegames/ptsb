@@ -64,7 +64,7 @@ function register(x){
     sszipcode= $('#registerzipcodeinput').val().trim();
     sscity= $('#registercityinput').val().trim();
     ssstate= $('#registerstateinput').val().trim();
-    sspasscode= $('#registerstateinput').val().trim();
+    sspasscode= $('#registerpasswordinput').val().trim();
     ssmobilephone= $('#registerphonenumberinput').val().trim();
 
     if (x == 1 ) {
