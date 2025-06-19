@@ -61,6 +61,9 @@ function sendMessage(){
                 $('#contactSendBtn').show();
             });
         }
+    }else{
+        $('#contactSendBtn').show();
+
     }
 }
 
