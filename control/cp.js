@@ -29,6 +29,7 @@ $('document').ready(
     
     function(){
         // 2025
+        GETCLIENTMESSAGES();
         GETALL();
         // 2025
         GET_ALL_TRANSFER_REQUEST();
@@ -260,7 +261,88 @@ $('document').ready(
     }
 );
 
+
+
+
 // 2025
+function closeMessages(){
+    $('#message_from_clients').hide();
+}
+function openMessages(){
+    $('#message_from_clients').show();
+    GETCLIENTMESSAGESONLY();
+}
+function GETCLIENTMESSAGES(){
+    $("#msglists li").remove();
+    var checkme;
+        db.collection("CLIENTMESSAGES").orderBy("timer_date", "desc")
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " NEW CLIENTS MESSAGES => ", doc.data());
+                checkme = doc.id;
+                //APPENDERDB(doc,details,CODES);
+                        $("#msglists")
+                        .append('<h3 class="teal-text flow-text"></h3>'
+                        +
+                        '<li>'
+                        +   '<span class="email_client">'+ doc.data().email+'</span>'
+                        +   '<span class="name_client">'+ doc.data().name+'</span>'
+                        +   ' <span class="message_client">'+ doc.data().message_client+'</span>'
+                        +   '<span class="datetime_client">'+ doc.data().date+'</span>'
+                        +
+                        '</li>'
+                        );
+            });
+        })
+        .catch((error) => {
+            console.log("Error TRANSACTIONS: ", error);
+        });
+
+
+        setTimeout(() => {
+            if (checkme != '') {
+                $('#message_from_clients').show();
+            }
+        }, 3444);
+}
+function GETCLIENTMESSAGESONLY(){
+    $("#msglists li").remove();
+    var checkme;
+    // $('#message_from_clients').show();
+        db.collection("CLIENTMESSAGES").orderBy("timer_date", "desc")
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " NEW CLIENTS MESSAGES => ", doc.data());
+                checkme = doc.id;
+                //APPENDERDB(doc,details,CODES);
+                        $("#msglists")
+                        .append('<h3 class="teal-text flow-text"></h3>'
+                        +
+                        '<li>'
+                        +   '<span class="email_client">'+ doc.data().email+'</span>'
+                        +   '<span class="name_client">'+ doc.data().name+'</span>'
+                        +   ' <span class="message_client">'+ doc.data().message_client+'</span>'
+                        +   '<span class="datetime_client">'+ doc.data().date+'</span>'
+                        +
+                        '</li>'
+                        );
+            });
+        })
+        .catch((error) => {
+            console.log("Error TRANSACTIONS: ", error);
+        });
+
+
+        setTimeout(() => {
+            if (checkme != '') {
+            }
+        }, 3444);
+}
+
 function acceptUser(){
     $('#rgi1').addClass('hide');
 
@@ -4784,6 +4866,7 @@ function MAKE_A_TRANSFER(account,date,timestamp,nameOfBank,addressOfBank
             t_which_account: fromWhichAccount,
             transfer_type: 'outgoing',
             receiver_name: receiverName,
+            description: receiverName,
             bank_name: bankName,
             order_number: 100,
             bank_address: bankAddress,
@@ -4924,6 +5007,7 @@ function ADD_TO_TRANSACTIONS_1(){
             transaction_description: 'New Transaction Added',
             transfer_type: 'outgoing',
             receiver_name: "receiverName",
+            description: ".....",
             bank_name: "bankName",
             bank_address: "bankAddress",
             order_number: 200,
