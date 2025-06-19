@@ -18,6 +18,12 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all" />
 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -655,6 +661,7 @@
             </div>
         </section>
 
+        <br><br> <br> <br> <br> <br> <br> <br> 
         <section class="cta-area pt-60">
             <div class="container">
                 <div class="row">
@@ -701,7 +708,7 @@
             </div>
         </section>
 
-        <br><br> <br> <br> <br>
+        <br><br> <br> <br> <br> <br> <br> <br> 
         <!-- Get In Touch start -->
         <section class="pt-140 pb-140 get-touch-area bg_white" id="contact">
             <div class="container">
@@ -765,7 +772,7 @@
                     </div>
                     <div class="col-lg-6 offset-lg-1">
                         <div class="contact-form-widget">
-                            <form action="mail.php" method="POST">
+                            <form>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="f-name">Full Name</label>
@@ -780,7 +787,7 @@
                                     <div class="col-md-12 mt-20" style="display: none;">
                                         <label for="form-sub">Subject</label>
                                         <input type="text" id="form-sub" name="subject" class="form-control"
-                                            placeholder="Your subject" required>
+                                            placeholder="Your subject">
                                     </div>
                                     <div class="col-md-12 mt-20">
                                         <label for="form-text">Messages</label>
@@ -796,7 +803,7 @@
                                         </p>
                                     </div>
                                     <div class="col-12 mt-35">
-                                        <button type="submit" class="theme-btn theme-btn-lg w-100">Submit Now</button>
+                                        <button type="submit" class="theme-btn theme-btn-lg w-100" onclick="getFormattedDateTime();">Submit Now</button>
                                     </div>
                                 </div>
                             </form>
