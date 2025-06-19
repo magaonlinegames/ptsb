@@ -1,4 +1,51 @@
 /* JUNE 2025 */
+
+#clMessages{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 777;
+}
+#message_from_clients{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #dddddd;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    bottom: 0;
+    width: 190px;
+    z-index: 778;
+    display: none;
+}
+#closeMessagesBTN{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 9px;
+    cursor: pointer;
+}
+#msglists{
+    margin-top: 40px;
+}
+#msglists span{
+    display: block;
+}
+.message_client{
+    color: teal;
+}
+.email_client{
+    color: teal;
+}
+#msglists li{
+    border-bottom: 1px solid grey;
+    padding: 3px;
+    margin-top: 6px;
+}
+
+.hideme{
+    display: none!important;
+}
+
 .register-form{
     position: fixed;
     top: 0;
