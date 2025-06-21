@@ -366,7 +366,7 @@ function ACCEPTMEMBER(){
             account_email: email,
             account_holder: name,
             account_password: password,
-            account_status: 1,
+            account_status: 0,
             name: name
         })
         .then(() => {
