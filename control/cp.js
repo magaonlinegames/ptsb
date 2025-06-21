@@ -1021,10 +1021,10 @@ function SAVE_BANK_USER_INFORMATION_1(){
 function ACCOUNT_ACTIVE_INACTIVE(){
     var THISACC = 'account' + $('#WHICHACC-INPUT').val();
     if ($('.CDFORM .switch input').prop('checked') == true) {
-        //alert('Checked');
+        console.log('Checkedbox is true');
         //MAKE ACCOUNT ACTIVE
         firebase.firestore().collection("BANKSERVICES").doc(THISACC).update({
-            account_status: 1
+            account_status: 0
         })
         .then((docRef) => {
             console.log("ACCOUNT STATUS UPDATED ");
@@ -1035,10 +1035,11 @@ function ACCOUNT_ACTIVE_INACTIVE(){
             console.error("ERROR UPDATING ACCOUNT STATUS: ", error);
         });
     }else{
-        //alert('NOT Checked');
+        console.log('Checkedbox is false');
+
         //MAKE ACCOUNT INACTIVE
         firebase.firestore().collection("BANKSERVICES").doc(THISACC).update({
-            account_status: 0
+            account_status: 1
         })
         .then((docRef) => {
             console.log("ACCOUNT STATUS UPDATED ");
@@ -4321,10 +4322,14 @@ function realTimeUpdates(which_acc, x){
         .onSnapshot((doc) => {
         console.log("Current ACCOUNT STAT: ", doc.data().account_status);
         if (doc.data().account_status == 1) {
-            console.log('It is');
-            $('#checkbox-bank').attr('checked', true);
+            $('#account_status_checkbox').prop('checked', false);
+            $('#acc_active').removeClass('green-text');
+            $('#acc_inactive').addClass('red-text');
+            // console.log('It is locked');
         }else{
-            $('#checkbox-bank').prop('checked', false);
+            $('#account_status_checkbox').prop('checked', true);
+            $('#acc_inactive').removeClass('red-text');
+            $('#acc_active').addClass('green-text');
         }
         });
     }
