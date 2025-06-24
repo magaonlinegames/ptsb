@@ -699,6 +699,23 @@ and (min-width: 0px) {
     text-align: center;
     font-size: 13px;
 }
+.rpx-success h4{
+    text-align: center;
+}
+#rpxi img{
+    display: block;
+    margin: auto;
+    width: 134px;
+}
+#rpxi a{
+    display: block;
+    width: 100px;
+    margin: auto;
+    margin-top: 5px;
+}
+.rpxcard{
+    /* display: none; */
+}
 .report_card_1{
     border-radius: 15px;
     padding: 13px;
@@ -750,6 +767,7 @@ and (min-width: 0px) {
 }
 #report_message_txt{
     height: 10rem;
+    padding: 10px;
 }
 #report_page_form{
     height: 95%;
