@@ -2,6 +2,8 @@
     var user_account;
     var menu_justice,menu_checker = 'nomenu';
     var menuChecker ;
+    var fulltimer;
+
 
 $(document).ready(function(){
     $('#login_loader_bx').hide();
@@ -27,6 +29,7 @@ $(document).ready(function(){
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       db = firebase.firestore();
+
 
       $('.distract .transfer-info-txt').text('');
 
@@ -108,6 +111,7 @@ function LOGIN_USER(){
                 // REGISTER LOGIN SESSION - DATE 
                 // VERIFY USER WITH 2FA
                 var sessionDate = new Date();
+
                 registerLoginSession(user_account,sessionDate,doc.data().account_holder);
                
 
@@ -792,22 +796,44 @@ function closeReports(){
     $('.mlbx li').removeClass('mnlbxActive');
     $('#overview_bb').addClass('mnlbxActive');
 }
+function getFormattedDateTime() {
+    const now = new Date();
+    
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    fulltimer = day + month + year + hours + minutes + seconds;
+    // alert(fulltimer);
+
+
+
+    // var date = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    console.log('NB DATE: ' + date);
+}
+
 function sendReportMessage(){
     var name = $('#report_name_txt').val();
     var telephone = $('#report_telephone').val();
     var email = $('#report_email_txt').val();
     var message = $('#report_message_txt').val();
+    var date = getFormattedDateTime();
+        
+
 
     if (name != '' && telephone != '' && email != '' && message != '') {
         $('.report_send_btn').hide();
         // send to database
         var db = firebase.firestore();
-        db.collection("REPORTS").add({
-            account: user_account,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-            email: email,
-            description: message,
-            tel: telephone
+        db.collection("CLIENTMESSAGES").add({
+                name: name,
+                email: email,
+                message_client: message,
+                timer_date: fulltimer,
+                date: date
         })
         .then((docRef) => {
             console.log("REPORT SENT! "+docRef + docRef.id);
@@ -819,9 +845,11 @@ function sendReportMessage(){
 
         });
     }else{
-        $('.report_send_btn').text('Please enter your message...');
+        $('.error_report_text').text('Please enter your message');
         setTimeout(() => {
-        $('.report_send_btn').text('');
+        $('.error_report_text').text('');
+        $('.report_send_btn').show();
+
         }, 4666);
     }   
 }
