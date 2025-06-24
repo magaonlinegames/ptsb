@@ -695,20 +695,27 @@ and (min-width: 0px) {
     margin-top: 5%;
     overflow: auto;
 }
-
+.error_report_text{
+    text-align: center;
+    font-size: 13px;
+}
 .report_card_1{
+    border-radius: 15px;
     padding: 13px;
     font-size: 18px;
+    color: #000;
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
 }
 .rc1_title{
     font-weight: 500;
+    color: #fff;
 }
 .rc1_title hr{
     border-color: rgb(33 150 243);
 }
 
 .report_card_bhx{
+    border-radius: 15px;
     font-size: 20px;
     padding: 34px;
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
@@ -716,9 +723,11 @@ and (min-width: 0px) {
 .rbx1{
     position: relative;
     top: -5px;
+    font-family: sans-serif;
 }
 .rc1_contact_bx{
-    font-size: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
     letter-spacing: 2px;
 }
 .rc1_contact_bx li{
