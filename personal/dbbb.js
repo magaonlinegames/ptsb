@@ -837,6 +837,8 @@ function sendReportMessage(){
         })
         .then((docRef) => {
             console.log("REPORT SENT! "+docRef + docRef.id);
+            $('.rpxcard').hide();
+            $('.rpx-success').removeClass('hide');
             $('.report_send_btn').show();
         })
         .catch((error) => {
